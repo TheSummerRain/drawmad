@@ -1,0 +1,1038 @@
+[ 2015-09-06T08:58:31+08:00 ] 127.0.0.1 /Game
+ERR: 无法加载模块:Game
+
+[ 2015-09-06T09:41:39+08:00 ] 127.0.0.1 /Game/User/addUser
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_group` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_group` WHERE ( game_mad=3 )  [ RunTime:0.000000s ]
+ERR: 非法操作:addUser
+
+[ 2015-09-06T09:49:35+08:00 ] 127.0.0.1 /Game/User/addUser
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_group` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_group` WHERE ( game_mad=3 )  [ RunTime:0.000000s ]
+ERR: 非法操作:addUser
+
+[ 2015-09-06T09:49:41+08:00 ] 127.0.0.1 /Game/User/addUser
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_group` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_group` WHERE ( game_mad=3 )  [ RunTime:0.000000s ]
+ERR: 非法操作:addUser
+
+[ 2015-09-06T09:49:52+08:00 ] 127.0.0.1 /Game/User/addUser
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_group` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_group` WHERE ( game_mad=3 )  [ RunTime:0.000000s ]
+ERR: 非法操作:addUser
+
+[ 2015-09-06T10:26:57+08:00 ] 127.0.0.1 /Game/User/addUser
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_group` [ RunTime:0.003001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_group` WHERE ( game_mad=3 )  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mad_group E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\UserAction.class.php 第 87 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `id` FROM `game_mad_group` WHERE ( game_mad=3 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: state E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\UserAction.class.php 第 94 行.
+SQL: SHOW COLUMNS FROM `game_mad_user` [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_user` WHERE ( `game_id` = 3 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_mad` [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_mad` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.001000s ]
+
+[ 2015-09-06T10:27:21+08:00 ] 127.0.0.1 /Game/User/addUser
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_group` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_group` WHERE ( game_mad=3 )  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mad_group E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\UserAction.class.php 第 87 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `id` FROM `game_mad_group` WHERE ( game_mad=3 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: state E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\UserAction.class.php 第 94 行.
+SQL: SHOW COLUMNS FROM `game_mad_user` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_user` WHERE ( `game_id` = 3 ) AND ( `user_id` = 10718 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `user_mad` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_mad` WHERE ( id=10718 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `game_mad_user` (`user_id`,`state_user`,`mad_group`,`game_id`) VALUES (10718,null,'5',3) [ RunTime:0.000000s ]
+ERR: 1048:Column 'state_user' cannot be null
+ [ SQL语句 ] : INSERT INTO `game_mad_user` (`user_id`,`state_user`,`mad_group`,`game_id`) VALUES (10718,null,'5',3)
+
+[ 2015-09-06T10:28:22+08:00 ] 127.0.0.1 /Game/User/addUser
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_group` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_group` WHERE ( game_mad=3 )  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mad_group E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\UserAction.class.php 第 87 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `id` FROM `game_mad_group` WHERE ( game_mad=3 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: state E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\UserAction.class.php 第 94 行.
+SQL: SHOW COLUMNS FROM `game_mad_user` [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_user` WHERE ( `game_id` = 3 ) AND ( `user_id` = 10718 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_mad` [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_mad` WHERE ( id=10718 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `game_mad_user` (`user_id`,`state_user`,`mad_group`,`game_id`) VALUES (10718,null,'5',3) [ RunTime:0.000000s ]
+ERR: 1048:Column 'state_user' cannot be null
+ [ SQL语句 ] : INSERT INTO `game_mad_user` (`user_id`,`state_user`,`mad_group`,`game_id`) VALUES (10718,null,'5',3)
+
+[ 2015-09-06T10:28:53+08:00 ] 127.0.0.1 /Game/User/addUser
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_group` [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_group` WHERE ( game_mad=3 )  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mad_group E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\UserAction.class.php 第 87 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `id` FROM `game_mad_group` WHERE ( game_mad=3 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: state E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\UserAction.class.php 第 94 行.
+SQL: SHOW COLUMNS FROM `game_mad_user` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_user` WHERE ( `game_id` = 3 ) AND ( `user_id` = 10718 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_mad` [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_mad` WHERE ( id=10718 ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-09-06T10:28:56+08:00 ] 127.0.0.1 /Game/User/addUser
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_group` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_group` WHERE ( game_mad=3 )  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mad_group E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\UserAction.class.php 第 87 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `id` FROM `game_mad_group` WHERE ( game_mad=3 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: state E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\UserAction.class.php 第 94 行.
+SQL: SHOW COLUMNS FROM `game_mad_user` [ RunTime:0.003001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_user` WHERE ( `game_id` = 3 ) AND ( `user_id` = 107181 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_mad` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_mad` WHERE ( id=107181 ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-09-06T10:29:05+08:00 ] 127.0.0.1 /Game/User/addUser
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_group` [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_group` WHERE ( game_mad=3 )  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mad_group E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\UserAction.class.php 第 87 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `id` FROM `game_mad_group` WHERE ( game_mad=3 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: state E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\UserAction.class.php 第 94 行.
+SQL: SHOW COLUMNS FROM `game_mad_user` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_user` WHERE ( `game_id` = 3 ) AND ( `user_id` = 10000 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `user_mad` [ RunTime:0.003001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_mad` WHERE ( id=10000 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: INSERT INTO `game_mad_user` (`user_id`,`state_user`,`mad_group`,`game_id`) VALUES (10000,null,'5',3) [ RunTime:0.000000s ]
+ERR: 1048:Column 'state_user' cannot be null
+ [ SQL语句 ] : INSERT INTO `game_mad_user` (`user_id`,`state_user`,`mad_group`,`game_id`) VALUES (10000,null,'5',3)
+
+[ 2015-09-06T10:30:03+08:00 ] 127.0.0.1 /Game/User/addUser
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_group` [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_group` WHERE ( game_mad=3 )  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mad_group E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\UserAction.class.php 第 87 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `id` FROM `game_mad_group` WHERE ( game_mad=3 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: state E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\UserAction.class.php 第 94 行.
+SQL: SHOW COLUMNS FROM `game_mad_user` [ RunTime:0.003001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_user` WHERE ( `game_id` = 3 ) AND ( `user_id` = 10000 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `user_mad` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_mad` WHERE ( id=10000 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `game_mad_user` (`user_id`,`state_user`,`mad_group`,`game_id`) VALUES (10000,null,'5',3) [ RunTime:0.000000s ]
+ERR: 1048:Column 'state_user' cannot be null
+ [ SQL语句 ] : INSERT INTO `game_mad_user` (`user_id`,`state_user`,`mad_group`,`game_id`) VALUES (10000,null,'5',3)
+
+[ 2015-09-06T10:30:15+08:00 ] 127.0.0.1 /Game/User/addUser
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_group` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_group` WHERE ( game_mad=3 )  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mad_group E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\UserAction.class.php 第 87 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `id` FROM `game_mad_group` WHERE ( game_mad=3 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: state E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\UserAction.class.php 第 94 行.
+SQL: SHOW COLUMNS FROM `game_mad_user` [ RunTime:0.004000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_user` WHERE ( `game_id` = 3 ) AND ( `user_id` = 10000 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `user_mad` [ RunTime:0.004000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_mad` WHERE ( id=10000 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: INSERT INTO `game_mad_user` (`user_id`,`state_user`,`mad_group`,`game_id`) VALUES (10000,null,'5',3) [ RunTime:0.001000s ]
+ERR: 1048:Column 'state_user' cannot be null
+ [ SQL语句 ] : INSERT INTO `game_mad_user` (`user_id`,`state_user`,`mad_group`,`game_id`) VALUES (10000,null,'5',3)
+
+[ 2015-09-06T10:31:01+08:00 ] 127.0.0.1 /Game/User/addUser
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_group` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_group` WHERE ( game_mad=3 )  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mad_group E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\UserAction.class.php 第 87 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `id` FROM `game_mad_group` WHERE ( game_mad=3 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: state E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\UserAction.class.php 第 94 行.
+SQL: SHOW COLUMNS FROM `game_mad_user` [ RunTime:0.002001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_user` WHERE ( `game_id` = 3 ) AND ( `user_id` = 10000 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_mad` [ RunTime:0.004000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_mad` WHERE ( id=10000 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `game_mad_user` (`user_id`,`state_user`,`mad_group`,`game_id`) VALUES (10000,null,'5',3) [ RunTime:0.001000s ]
+ERR: 1048:Column 'state_user' cannot be null
+ [ SQL语句 ] : INSERT INTO `game_mad_user` (`user_id`,`state_user`,`mad_group`,`game_id`) VALUES (10000,null,'5',3)
+
+[ 2015-09-06T10:31:35+08:00 ] 127.0.0.1 /Game/User/addUser
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_group` [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_group` WHERE ( game_mad=3 )  [ RunTime:0.000000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `id` FROM `game_mad_group` WHERE ( game_mad=3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `game_mad_user` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_user` WHERE ( `game_id` = 3 ) AND ( `user_id` = 10000 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `user_mad` [ RunTime:0.003001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_mad` WHERE ( id=10000 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `game_mad_user` (`user_id`,`state_user`,`mad_group`,`game_id`) VALUES (10000,0,'5',3) [ RunTime:0.063003s ]
+
+[ 2015-09-06T10:32:25+08:00 ] 127.0.0.1 /Game/User/addUser
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_group` [ RunTime:0.004000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_group` WHERE ( game_mad=3 )  [ RunTime:0.000000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `id` FROM `game_mad_group` WHERE ( game_mad=3 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2] date() expects parameter 2 to be long, string given E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\UserAction.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `game_mad_user` [ RunTime:0.004000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_user` WHERE ( `game_id` = 3 ) AND ( `user_id` = 10000 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `user_mad` [ RunTime:0.004000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_mad` WHERE ( id=10000 ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-09-06T10:32:31+08:00 ] 127.0.0.1 /Game/User/addUser
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_group` [ RunTime:0.006000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_group` WHERE ( game_mad=3 )  [ RunTime:0.000000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `id` FROM `game_mad_group` WHERE ( game_mad=3 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2] date() expects parameter 2 to be long, string given E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\UserAction.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `game_mad_user` [ RunTime:0.007001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_user` WHERE ( `game_id` = 3 ) AND ( `user_id` = 10000 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `user_mad` [ RunTime:0.007000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_mad` WHERE ( id=10000 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `game_mad_user` (`user_id`,`state_user`,`mad_group`,`game_id`,`date_turn`) VALUES (10000,0,'5',3,0) [ RunTime:0.029002s ]
+
+[ 2015-09-06T10:33:13+08:00 ] 127.0.0.1 /Game/User/addUser
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_group` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_group` WHERE ( game_mad=3 )  [ RunTime:0.000000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `id` FROM `game_mad_group` WHERE ( game_mad=3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `game_mad_user` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_user` WHERE ( `game_id` = 3 ) AND ( `user_id` = 10000 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `user_mad` [ RunTime:0.004000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_mad` WHERE ( id=10000 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: INSERT INTO `game_mad_user` (`user_id`,`state_user`,`mad_group`,`game_id`,`date_turn`) VALUES (10000,0,'5',3,'2015-09-06 10-33-13') [ RunTime:0.029001s ]
+
+[ 2015-09-06T10:33:41+08:00 ] 127.0.0.1 /Game/User/addUser
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_group` [ RunTime:0.003001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_group` WHERE ( game_mad=3 )  [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `id` FROM `game_mad_group` WHERE ( game_mad=3 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `game_mad_user` [ RunTime:0.004000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_user` WHERE ( `game_id` = 3 ) AND ( `user_id` = 19999 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `user_mad` [ RunTime:0.004000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_mad` WHERE ( id=19999 ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-09-06T10:35:59+08:00 ] 127.0.0.1 /Game/User/addUser
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_group` [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_group` WHERE ( game_mad=3 )  [ RunTime:0.000000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `id` FROM `game_mad_group` WHERE ( game_mad=3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `game_mad_user` [ RunTime:0.003001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_user` WHERE ( `game_id` = 3 ) AND ( `user_id` = 10000 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `user_mad` [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_mad` WHERE ( id=10000 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `game_mad_user` (`user_id`,`state_user`,`mad_group`,`game_id`,`date_turn`) VALUES (10000,0,'5',3,'2015-09-06 10-35-59') [ RunTime:0.030002s ]
+
+[ 2015-09-06T10:37:16+08:00 ] 127.0.0.1 /Game/User/addUser
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_group` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_group` WHERE ( game_mad=3 )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `game_mad_user` [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_user` WHERE ( `game_id` = 3 ) AND ( `user_id` = 10000 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `user_mad` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_mad` WHERE ( id=10000 ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-09-06T10:37:29+08:00 ] 127.0.0.1 /Game/User/addUser
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_group` [ RunTime:0.006000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_group` WHERE ( game_mad=3 )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `game_mad_user` [ RunTime:0.005000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `game_mad_user` WHERE ( `game_id` = 3 ) AND ( `user_id` = 10000 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_mad` [ RunTime:0.006000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_mad` WHERE ( id=10000 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `game_mad_user` (`user_id`,`state_user`,`mad_group`,`game_id`,`date_turn`) VALUES (10000,1,'6',3,'2015-09-06 10-37-29') [ RunTime:0.037002s ]
+
+[ 2015-09-06T10:48:39+08:00 ] 127.0.0.1 /Game/User/addRelease?id=
+ERR: 非法操作:addRelease
+
+[ 2015-09-06T10:59:44+08:00 ] 127.0.0.1 /Game/User/modifyGroup?id=78
+ERR: 非法操作:modifyGroup
+
+[ 2015-09-06T11:00:00+08:00 ] 127.0.0.1 /Game/User/modifyGroup?id=78
+ERR: 非法操作:modifyGroup
+
+[ 2015-09-06T11:03:04+08:00 ] 127.0.0.1 /Game/User/saveGroup
+ERR: 非法操作:saveGroup
+
+[ 2015-09-06T18:08:37+08:00 ] 127.0.0.1 /index.php/MyZone/refreshNotice
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of MyZoneAction::uploadify() should be compatible with PublicAction::uploadify($expand = '') E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 179 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 184 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 233
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 233
+) and type = '4' and user_id = 233
+ [ RunTime:0.001000s ]
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id = 233 and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: tabVal E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 374 行.
+SQL: SHOW COLUMNS FROM `user_notice` [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: tabVal E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 378 行.
+SQL: UPDATE `user_notice` SET `state`=1,`read_date`='2015-09-06 18:08:37' WHERE ( type= ) [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : UPDATE `user_notice` SET `state`=1,`read_date`='2015-09-06 18:08:37' WHERE ( type= )
+
+[ 2015-09-06T18:08:39+08:00 ] 127.0.0.1 /index.php/MyZone/refreshNotice
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of MyZoneAction::uploadify() should be compatible with PublicAction::uploadify($expand = '') E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 179 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 184 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 233
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 233
+) and type = '4' and user_id = 233
+ [ RunTime:0.001000s ]
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id = 233 and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: tabVal E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 374 行.
+SQL: SHOW COLUMNS FROM `user_notice` [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: tabVal E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 378 行.
+SQL: UPDATE `user_notice` SET `state`=1,`read_date`='2015-09-06 18:08:39' WHERE ( type= ) [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : UPDATE `user_notice` SET `state`=1,`read_date`='2015-09-06 18:08:39' WHERE ( type= )
+
+[ 2015-09-06T18:08:41+08:00 ] 127.0.0.1 /index.php/MyZone/refreshNotice
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of MyZoneAction::uploadify() should be compatible with PublicAction::uploadify($expand = '') E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 179 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 184 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 233
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 233
+) and type = '4' and user_id = 233
+ [ RunTime:0.001000s ]
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id = 233 and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: tabVal E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 374 行.
+SQL: SHOW COLUMNS FROM `user_notice` [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: tabVal E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 378 行.
+SQL: UPDATE `user_notice` SET `state`=1,`read_date`='2015-09-06 18:08:41' WHERE ( type= ) [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : UPDATE `user_notice` SET `state`=1,`read_date`='2015-09-06 18:08:41' WHERE ( type= )
+
+[ 2015-09-06T18:10:57+08:00 ] 127.0.0.1 /index.php/MyZone/refreshNotice
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of MyZoneAction::uploadify() should be compatible with PublicAction::uploadify($expand = '') E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 179 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 184 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 233
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 233
+) and type = '4' and user_id = 233
+ [ RunTime:0.001000s ]
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id = 233 and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: tabVal E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 362 行.
+SQL: update user_notice set state = 1
+where id in (
+select a.id from (
+select id from user_notice
+where type =   
+limit 0,
+) a
+
+) [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,
+) a
+
+)' at line 6
+ [ SQL语句 ] : update user_notice set state = 1
+where id in (
+select a.id from (
+select id from user_notice
+where type =   
+limit 0,
+) a
+
+)
+
+[ 2015-09-06T18:11:17+08:00 ] 127.0.0.1 /index.php/MyZone/refreshNotice
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of MyZoneAction::uploadify() should be compatible with PublicAction::uploadify($expand = '') E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 179 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 184 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 233
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 233
+) and type = '4' and user_id = 233
+ [ RunTime:0.001000s ]
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id = 233 and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: tabVal E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 362 行.
+SQL: update user_notice set state = 1
+where id in (
+select a.id from (
+select id from user_notice
+where type =   
+limit 0,
+) a
+
+) [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,
+) a
+
+)' at line 6
+ [ SQL语句 ] : update user_notice set state = 1
+where id in (
+select a.id from (
+select id from user_notice
+where type =   
+limit 0,
+) a
+
+)
+
+[ 2015-09-06T18:11:37+08:00 ] 127.0.0.1 /index.php/MyZone/updata_video
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of MyZoneAction::uploadify() should be compatible with PublicAction::uploadify($expand = '') E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 179 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 184 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 233
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 233
+) and type = '4' and user_id = 233
+ [ RunTime:0.001000s ]
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id = 233 and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: biaoqian2 E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 540 行.
+NOTIC: [8] Undefined index: biaoqian3 E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 541 行.
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `video` WHERE ( id=10111 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: zuozhe E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 609 行.
+SQL: UPDATE `video` SET `video_path`='edit_id_233_num_10.flv',`fengmian`='edit_id_233_num_10.png',`title`='测试1',`BGM`='音乐',`wg_time`='2015-08-23',`jieshao`='',`xiazai`='http://test.drawmad2.com/index.php/UpVideo',`xiazaipass`='',`down_purview`=0,`is_original`=1,`biaoqian`='AMV / 人物 / 浪漫 / 合作 / 舞曲',`video_type_ids`='2,4,6,8',`zuozhe`='无聊你妹',`user_id`=233,`update_time`='2015-09-06 18:11:37',`state`=0 WHERE ( `id` = 10111 ) [ RunTime:0.034002s ]
+
+[ 2015-09-06T18:11:42+08:00 ] 127.0.0.1 /index.php/MyZone/refreshNotice
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of MyZoneAction::uploadify() should be compatible with PublicAction::uploadify($expand = '') E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 179 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 184 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 233
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 233
+) and type = '4' and user_id = 233
+ [ RunTime:0.001000s ]
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id = 233 and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: tabVal E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 362 行.
+SQL: update user_notice set state = 1
+where id in (
+select a.id from (
+select id from user_notice
+where type =   
+limit 0,
+) a
+
+) [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,
+) a
+
+)' at line 6
+ [ SQL语句 ] : update user_notice set state = 1
+where id in (
+select a.id from (
+select id from user_notice
+where type =   
+limit 0,
+) a
+
+)
+
+[ 2015-09-06T18:31:45+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:31:45+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:31:48+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:31:48+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:38:27+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:38:27+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:39:58+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:39:58+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:40:01+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:40:01+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:40:49+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:40:49+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:41:21+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:41:21+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:41:36+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:41:36+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:43:50+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:43:50+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:44:03+08:00 ] 127.0.0.1 /MAD/Modules/Index/Tpl/Public/js/jPag1es.js
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:44:09+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:44:09+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:47:22+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:47:22+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:47:31+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:47:31+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:47:38+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:47:38+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:49:27+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:49:27+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:50:08+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:50:08+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:50:18+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:50:18+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:50:53+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:50:53+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:51:07+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:51:07+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:52:26+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:52:26+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:52:40+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:52:40+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:52:45+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:52:45+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:53:07+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:53:07+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:54:01+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:54:01+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:54:17+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:54:17+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:54:25+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:54:25+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:54:34+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:54:34+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:54:36+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:54:36+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:56:29+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:56:29+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:57:07+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:57:07+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:57:23+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:57:23+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:57:41+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:57:41+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:58:18+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:58:18+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:58:31+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:58:31+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T18:59:57+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T18:59:57+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T19:01:29+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-06T19:01:29+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-06T19:07:07+08:00 ] 127.0.0.1 /Ad
+ERR: 无法加载模块:Ad
+

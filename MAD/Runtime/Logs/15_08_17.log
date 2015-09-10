@@ -1,0 +1,291 @@
+[ 2015-08-17T10:16:55+08:00 ] 127.0.0.1 /index.php/Organize/Video/saveRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `user_admin` [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_admin` WHERE ( id=39 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 137 行.
+NOTIC: [8] Undefined index: datahead E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Organize\Action\VideoAction.class.php 第 89 行.
+NOTIC: [8] Undefined index: datahead E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Organize\Action\VideoAction.class.php 第 91 行.
+NOTIC: [8] Undefined index: datahead E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Organize\Action\VideoAction.class.php 第 92 行.
+NOTIC: [8] Undefined index: datahead E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Organize\Action\VideoAction.class.php 第 93 行.
+NOTIC: [8] Undefined index: datahead E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Organize\Action\VideoAction.class.php 第 94 行.
+NOTIC: [8] Undefined index: datahead E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Organize\Action\VideoAction.class.php 第 95 行.
+NOTIC: [8] Undefined index: datahead E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Organize\Action\VideoAction.class.php 第 96 行.
+SQL: SHOW COLUMNS FROM `organize_release_mad_1` [ RunTime:0.003000s ]
+SQL: INSERT INTO `organize_release_mad_1` (`title`,`date`,`explain`,`video_url`,`password`,`img`,`date_create`,`organize_type`) VALUES (null,null,null,null,null,null,'2015-08-17 10-16-55','1') [ RunTime:0.030002s ]
+SQL: SHOW COLUMNS FROM `organize_release_mad_2` [ RunTime:0.002000s ]
+SQL: INSERT INTO `organize_release_mad_2` (`head_id`,`date`,`author`,`title`,`video_url`,`img`,`password`) VALUES (4,'2015-08-17 10-16-55','作者1','标题1','sads','asd',''),(4,'2015-08-17 10-16-55','作者2','标题2','dasdas','asd','') [ RunTime:0.026002s ]
+
+[ 2015-08-17T10:17:30+08:00 ] 127.0.0.1 /index.php/Orgaasdasdnize/Video/saveRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Orgaasdasdnize
+
+[ 2015-08-17T10:20:11+08:00 ] 127.0.0.1 /index.php/Orgaasdasdnize/Video/saveRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Orgaasdasdnize
+
+[ 2015-08-17T10:20:31+08:00 ] 127.0.0.1 /index.php/Orgaasdasdnize/Video/saveRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Orgaasdasdnize
+
+[ 2015-08-17T11:34:08+08:00 ] 127.0.0.1 /index.php/Organize/Video/saveRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `user_admin` [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_admin` WHERE ( id=39 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 137 行.
+SQL: SHOW COLUMNS FROM `organize_release_mad_1` [ RunTime:0.002000s ]
+SQL: UPDATE `organize_release_mad_1` SET `title`='萌狼第二期',`date`='2015-08-05',`explain`='介绍',`video_url`='http://test.drawmadver2.com/index.php/Organize/Video/addRelease',`password`='ss',`img`='sad' WHERE ( `id` = 3 ) [ RunTime:0.036002s ]
+SQL: SHOW COLUMNS FROM `organize_release_mad_2` [ RunTime:0.002001s ]
+SQL: DELETE FROM `organize_release_mad_2` WHERE ( head_id=3 ) [ RunTime:0.027001s ]
+SQL: INSERT INTO `organize_release_mad_2` (`head_id`,`date`,`author`,`title`,`video_url`,`img`,`password`,`video_code`) VALUES (3,'2015-08-17 11-34-08','作者1','标题1','sads','asd','','都是你'),(3,'2015-08-17 11-34-08','作者2','标题2','dasdas','asd','','好好好') [ RunTime:0.055003s ]
+
+[ 2015-08-17T11:34:43+08:00 ] 127.0.0.1 /index.php/Organize/Video/saveRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `user_admin` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_admin` WHERE ( id=39 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 137 行.
+SQL: SHOW COLUMNS FROM `organize_release_mad_1` [ RunTime:0.003000s ]
+SQL: UPDATE `organize_release_mad_1` SET `title`='萌狼第二期',`date`='2015-08-05',`explain`='介绍',`video_url`='http://test.drawmadver2.com/index.php/Organize/Video/addRelease',`password`='ss',`img`='sad' WHERE ( `id` = 3 ) [ RunTime:0.042003s ]
+SQL: SHOW COLUMNS FROM `organize_release_mad_2` [ RunTime:0.036002s ]
+SQL: DELETE FROM `organize_release_mad_2` WHERE ( head_id=3 ) [ RunTime:0.045002s ]
+SQL: INSERT INTO `organize_release_mad_2` (`head_id`,`date`,`author`,`title`,`video_url`,`img`,`password`,`video_code`) VALUES (3,'2015-08-17 11-34-43','作者1','标题1','sads','asd','','<object type=\"application/x-shockwave-flash\" class=\"player\" data=\"http://static.hdslb.com/play.swf\" width=\"848\" height=\"480\" id=\"player_placeholder\" style=\"visibility: visible;\">\n        <param name=\"allowfullscreeninteractive\" value=\"true\">\n        <param name=\"allowfullscreen\" value=\"true\">\n        <param name=\"quality\" value=\"high\">\n        <param name=\"allowscriptaccess\" value=\"always\">\n        <param name=\"wmode\" value=\"direct\">\n        <param name=\"flashvars\" value=\"cid=4099408&amp;aid=2627958\">\n      </object>\n      <script type=\"text/javascript\">\n      EmbedPlayer(\'player\', \"http://static.hdslb.com/play.swf\", \"cid=4099408&aid=2627958\")\n      </script>'),(3,'2015-08-17 11-34-43','作者2','标题2','dasdas','asd','','<object type=\"application/x-shockwave-flash\" class=\"player\" data=\"http://static.hdslb.com/play.swf\" width=\"848\" height=\"480\" id=\"player_placeholder\" style=\"visibility: visible;\">\n        <param name=\"allowfullscreeninteractive\" value=\"true\">\n        <param name=\"allowfullscreen\" value=\"true\">\n        <param name=\"quality\" value=\"high\">\n        <param name=\"allowscriptaccess\" value=\"always\">\n        <param name=\"wmode\" value=\"direct\">\n        <param name=\"flashvars\" value=\"cid=4099408&amp;aid=2627958\">\n      </object>\n      <script type=\"text/javascript\">\n      EmbedPlayer(\'player\', \"http://static.hdslb.com/play.swf\", \"cid=4099408&aid=2627958\")\n      </script>') [ RunTime:0.130007s ]
+
+[ 2015-08-17T11:36:32+08:00 ] 127.0.0.1 /index.php/Moewolf/$%7Bevent.video_url%7D
+ERR: 非法操作:${event.video_url}
+
+[ 2015-08-17T11:37:13+08:00 ] 127.0.0.1 /index.php/Moewolf/$%7Bevent.video_url%7D
+ERR: 非法操作:${event.video_url}
+
+[ 2015-08-17T11:38:13+08:00 ] 127.0.0.1 /index.php/Moewolf/dasdas
+ERR: 非法操作:dasdas
+
+[ 2015-08-17T11:43:05+08:00 ] 127.0.0.1 /index.php/Moewolf/22
+ERR: 非法操作:22
+
+[ 2015-08-17T11:43:08+08:00 ] 127.0.0.1 /index.php/Moewolf/22
+ERR: 非法操作:22
+
+[ 2015-08-17T11:43:11+08:00 ] 127.0.0.1 /index.php/Moewolf/asd
+ERR: 非法操作:asd
+
+[ 2015-08-17T11:43:13+08:00 ] 127.0.0.1 /index.php/Moewolf/asd
+ERR: 非法操作:asd
+
+[ 2015-08-17T11:43:14+08:00 ] 127.0.0.1 /index.php/Moewolf/22
+ERR: 非法操作:22
+
+[ 2015-08-17T11:43:15+08:00 ] 127.0.0.1 /index.php/Moewolf/22
+ERR: 非法操作:22
+
+[ 2015-08-17T11:43:16+08:00 ] 127.0.0.1 /index.php/Moewolf/asd
+ERR: 非法操作:asd
+
+[ 2015-08-17T11:43:17+08:00 ] 127.0.0.1 /index.php/Moewolf/asd
+ERR: 非法操作:asd
+
+[ 2015-08-17T11:43:18+08:00 ] 127.0.0.1 /index.php/Moewolf/asd
+ERR: 非法操作:asd
+
+[ 2015-08-17T11:43:20+08:00 ] 127.0.0.1 /index.php/Moewolf/22
+ERR: 非法操作:22
+
+[ 2015-08-17T11:46:41+08:00 ] 127.0.0.1 /index.php/Moewolf/22
+ERR: 非法操作:22
+
+[ 2015-08-17T11:46:51+08:00 ] 127.0.0.1 /index.php/Moewolf/22
+ERR: 非法操作:22
+
+[ 2015-08-17T11:47:11+08:00 ] 127.0.0.1 /index.php/Moewolf/date=1
+ERR: 非法操作:date=1
+
+[ 2015-08-17T11:47:17+08:00 ] 127.0.0.1 /index.php/22
+ERR: 无法加载模块:22
+
+[ 2015-08-17T11:47:27+08:00 ] 127.0.0.1 /index.php/22
+ERR: 无法加载模块:22
+
+[ 2015-08-17T11:47:28+08:00 ] 127.0.0.1 /index.php/22
+ERR: 无法加载模块:22
+
+[ 2015-08-17T11:47:30+08:00 ] 127.0.0.1 /index.php/asd
+ERR: 无法加载模块:asd
+
+[ 2015-08-17T11:47:30+08:00 ] 127.0.0.1 /index.php/asd
+ERR: 无法加载模块:asd
+
+[ 2015-08-17T11:47:31+08:00 ] 127.0.0.1 /index.php/asd
+ERR: 无法加载模块:asd
+
+[ 2015-08-17T11:50:02+08:00 ] 127.0.0.1 /index.php/asd
+ERR: 无法加载模块:asd
+
+[ 2015-08-17T11:55:13+08:00 ] 127.0.0.1 /MAD/Modules/Index/Tpl/Public/videos/
+ERR: 无法加载模块:MAD
+
+[ 2015-08-17T11:55:28+08:00 ] 127.0.0.1 /MAD/Modules/Index/Tpl/Public/videos/
+ERR: 无法加载模块:MAD
+
+[ 2015-08-17T11:58:56+08:00 ] 127.0.0.1 /index.php/Organize/Video/saveRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `user_admin` [ RunTime:0.003001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_admin` WHERE ( id=39 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 137 行.
+SQL: SHOW COLUMNS FROM `organize_release_mad_1` [ RunTime:0.002000s ]
+SQL: UPDATE `organize_release_mad_1` SET `title`='萌狼第二期',`date`='2015-08-05',`explain`='介绍',`video_url`='http://test.drawmadver2.com/index.php/Organize/Video/addRelease',`password`='ss',`img`='sad' WHERE ( `id` = 3 ) [ RunTime:0.027001s ]
+SQL: SHOW COLUMNS FROM `organize_release_mad_2` [ RunTime:0.002001s ]
+SQL: DELETE FROM `organize_release_mad_2` WHERE ( head_id=3 ) [ RunTime:0.025001s ]
+SQL: INSERT INTO `organize_release_mad_2` (`head_id`,`date`,`author`,`title`,`video_url`,`img`,`password`,`video_code`) VALUES (3,'2015-08-17 11-58-56','作者1','标题1','sads','http://www.drawmad.com/MAD/Modules/Index/Tpl/Public/images/banner2.jpg','','dd'),(3,'2015-08-17 11-58-56','作者2','标题2','dasdas','http://www.drawmad.com/MAD/Modules/Index/Tpl/Public/images/banner2.jpg','','dd') [ RunTime:0.057003s ]
+
+[ 2015-08-17T11:59:08+08:00 ] 127.0.0.1 /index.php/22
+ERR: 无法加载模块:22
+
+[ 2015-08-17T13:13:51+08:00 ] 127.0.0.1 /index.php/22
+ERR: 无法加载模块:22
+
+[ 2015-08-17T13:15:00+08:00 ] 127.0.0.1 /index.php/22
+ERR: 无法加载模块:22
+
+[ 2015-08-17T13:15:00+08:00 ] 127.0.0.1 /index.php/22
+ERR: 无法加载模块:22
+
+[ 2015-08-17T13:15:44+08:00 ] 127.0.0.1 /index.php/22
+ERR: 无法加载模块:22
+
+[ 2015-08-17T13:15:53+08:00 ] 127.0.0.1 /index.php/22
+ERR: 无法加载模块:22
+
+[ 2015-08-17T13:15:53+08:00 ] 127.0.0.1 /index.php/22
+ERR: 无法加载模块:22
+
+[ 2015-08-17T13:16:06+08:00 ] 127.0.0.1 /index.php/22
+ERR: 无法加载模块:22
+
+[ 2015-08-17T13:21:18+08:00 ] 127.0.0.1 /index.php/Organize/Video/saveRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `user_admin` [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_admin` WHERE ( id=39 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 137 行.
+SQL: SHOW COLUMNS FROM `organize_release_mad_1` [ RunTime:0.002000s ]
+SQL: UPDATE `organize_release_mad_1` SET `title`='萌狼第二期',`date`='2015-08-05',`explain`='介绍',`video_url`='http://test.drawmadver2.com/index.php/Organize/Video/addRelease',`password`='ss',`img`='sad' WHERE ( `id` = 3 ) [ RunTime:0.025002s ]
+SQL: SHOW COLUMNS FROM `organize_release_mad_2` [ RunTime:0.003000s ]
+SQL: DELETE FROM `organize_release_mad_2` WHERE ( head_id=3 ) [ RunTime:0.026002s ]
+SQL: INSERT INTO `organize_release_mad_2` (`head_id`,`date`,`author`,`title`,`video_url`,`img`,`password`,`video_code`) VALUES (3,'2015-08-17 13-21-18','作者1','标题1','sads','http://www.drawmad.com/MAD/Modules/Index/Tpl/Public/images/banner2.jpg','','&lt;object type=\"application/x-shockwave-flash\" class=\"player\" data=\"http://static.hdslb.com/play.swf\" width=\"848\" height=\"480\" id=\"player_placeholder\" style=\"visibility: visible;\">\n        &lt;param name=\"allowfullscreeninteractive\" value=\"true\">\n        &lt;param name=\"allowfullscreen\" value=\"true\">\n        &lt;param name=\"quality\" value=\"high\">\n        &lt;param name=\"allowscriptaccess\" value=\"always\">\n        &lt;param name=\"wmode\" value=\"direct\">\n        &lt;param name=\"flashvars\" value=\"cid=4099408&amp;aid=2627958\">\n      &lt;/object>\n      &lt;script type=\"text/javascript\">\n      EmbedPlayer(\'player\', \"http://static.hdslb.com/play.swf\", \"cid=4099408&aid=2627958\")\n      &lt;/script>'),(3,'2015-08-17 13-21-18','作者2','标题2','dasdas','http://www.drawmad.com/MAD/Modules/Index/Tpl/Public/images/banner2.jpg','','&lt;object type=\"application/x-shockwave-flash\" class=\"player\" data=\"http://static.hdslb.com/play.swf\" width=\"848\" height=\"480\" id=\"player_placeholder\" style=\"visibility: visible;\">\n        &lt;param name=\"allowfullscreeninteractive\" value=\"true\">\n        &lt;param name=\"allowfullscreen\" value=\"true\">\n        &lt;param name=\"quality\" value=\"high\">\n        &lt;param name=\"allowscriptaccess\" value=\"always\">\n        &lt;param name=\"wmode\" value=\"direct\">\n        &lt;param name=\"flashvars\" value=\"cid=4099408&amp;aid=2627958\">\n      &lt;/object>\n      &lt;script type=\"text/javascript\">\n      EmbedPlayer(\'player\', \"http://static.hdslb.com/play.swf\", \"cid=4099408&aid=2627958\")\n      &lt;/script>') [ RunTime:0.060003s ]
+
+[ 2015-08-17T13:27:31+08:00 ] 127.0.0.1 /index.php/Organize/Video/saveRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `user_admin` [ RunTime:0.002001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_admin` WHERE ( id=39 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 137 行.
+SQL: SHOW COLUMNS FROM `organize_release_mad_1` [ RunTime:0.002000s ]
+SQL: UPDATE `organize_release_mad_1` SET `title`='萌狼第二期',`date`='2015-08-05',`explain`='介绍',`video_url`='http://test.drawmadver2.com/index.php/Organize/Video/addRelease',`password`='ss',`img`='sad' WHERE ( `id` = 3 ) [ RunTime:0.041002s ]
+SQL: SHOW COLUMNS FROM `organize_release_mad_2` [ RunTime:0.003000s ]
+SQL: DELETE FROM `organize_release_mad_2` WHERE ( head_id=3 ) [ RunTime:0.049003s ]
+SQL: INSERT INTO `organize_release_mad_2` (`head_id`,`date`,`author`,`title`,`video_url`,`img`,`password`,`video_code`) VALUES (3,'2015-08-17 13-27-31','作者1','标题1','sads','http://www.drawmad.com/MAD/Modules/Index/Tpl/Public/images/banner2.jpg','','                  <object type=\"application/x-shockwave-flash\" class=\"player\" data=\"http://static.hdslb.com/play.swf\" width=\"848\" height=\"480\" id=\"player_placeholder\" style=\"visibility: visible;\">\n        <param name=\"allowfullscreeninteractive\" value=\"true\">\n        <param name=\"allowfullscreen\" value=\"true\">\n        <param name=\"quality\" value=\"high\">\n        <param name=\"allowscriptaccess\" value=\"always\">\n        <param name=\"wmode\" value=\"direct\">\n        <param name=\"flashvars\" value=\"cid=4099408&amp;aid=2627958\">\n      </object>\n      <script type=\"text/javascript\">\n      EmbedPlayer(\'player\', \"http://static.hdslb.com/play.swf\", \"cid=4099408&aid=2627958\")\n      </script>          '),(3,'2015-08-17 13-27-31','作者2','标题2','dasdas','http://www.drawmad.com/MAD/Modules/Index/Tpl/Public/images/banner2.jpg','','                   <object type=\"application/x-shockwave-flash\" class=\"player\" data=\"http://static.hdslb.com/play.swf\" width=\"848\" height=\"480\" id=\"player_placeholder\" style=\"visibility: visible;\">\n        <param name=\"allowfullscreeninteractive\" value=\"true\">\n        <param name=\"allowfullscreen\" value=\"true\">\n        <param name=\"quality\" value=\"high\">\n        <param name=\"allowscriptaccess\" value=\"always\">\n        <param name=\"wmode\" value=\"direct\">\n        <param name=\"flashvars\" value=\"cid=4099408&amp;aid=2627958\">\n      </object>\n      <script type=\"text/javascript\">\n      EmbedPlayer(\'player\', \"http://static.hdslb.com/play.swf\", \"cid=4099408&aid=2627958\")\n      </script>         ') [ RunTime:0.062004s ]
+
+[ 2015-08-17T13:47:39+08:00 ] 127.0.0.1 /index.php/Organize/Video/saveRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `user_admin` [ RunTime:0.003001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_admin` WHERE ( id=39 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 137 行.
+SQL: SHOW COLUMNS FROM `organize_release_mad_1` [ RunTime:0.002000s ]
+SQL: UPDATE `organize_release_mad_1` SET `title`='萌狼第二期',`date`='2015-08-05',`explain`='介绍',`video_url`='http://test.drawmadver2.com/index.php/Organize/Video/addRelease',`password`='ss',`img`='sad' WHERE ( `id` = 3 ) [ RunTime:0.070004s ]
+SQL: SHOW COLUMNS FROM `organize_release_mad_2` [ RunTime:0.006000s ]
+SQL: DELETE FROM `organize_release_mad_2` WHERE ( head_id=3 ) [ RunTime:0.059004s ]
+SQL: INSERT INTO `organize_release_mad_2` (`head_id`,`date`,`author`,`title`,`video_url`,`img`,`password`,`video_code`) VALUES (3,'2015-08-17 13-47-39','作者1','标题1','sads','http://www.drawmad.com/MAD/Modules/Index/Tpl/Public/images/banner2.jpg','','&lt;object type=\"application/x-shockwave-flash\" class=\"player\" data=\"http://static.hdslb.com/play.swf\" width=\"848\" height=\"480\" id=\"player_placeholder\" style=\"visibility: visible;\">\n        &lt;param name=\"allowfullscreeninteractive\" value=\"true\">\n        &lt;param name=\"allowfullscreen\" value=\"true\">\n        &lt;param name=\"quality\" value=\"high\">\n        &lt;param name=\"allowscriptaccess\" value=\"always\">\n        &lt;param name=\"wmode\" value=\"direct\">\n        &lt;param name=\"flashvars\" value=\"cid=4099408&aid=2627958\">\n      &lt;/object>\n      &lt;script type=\"text/javascript\">\n      EmbedPlayer(\'player\', \"http://static.hdslb.com/play.swf\", \"cid=4099408&aid=2627958\")\n      &lt;/script> '),(3,'2015-08-17 13-47-39','作者2','标题2','dasdas','http://www.drawmad.com/MAD/Modules/Index/Tpl/Public/images/banner2.jpg','','&lt;object type=\"application/x-shockwave-flash\" class=\"player\" data=\"http://static.hdslb.com/play.swf\" width=\"848\" height=\"480\" id=\"player_placeholder\" style=\"visibility: visible;\">\n        &lt;param name=\"allowfullscreeninteractive\" value=\"true\">\n        &lt;param name=\"allowfullscreen\" value=\"true\">\n        &lt;param name=\"quality\" value=\"high\">\n        &lt;param name=\"allowscriptaccess\" value=\"always\">\n        &lt;param name=\"wmode\" value=\"direct\">\n        &lt;param name=\"flashvars\" value=\"cid=4099408&aid=2627958\">\n      &lt;/object>\n      &lt;script type=\"text/javascript\">\n      EmbedPlayer(\'player\', \"http://static.hdslb.com/play.swf\", \"cid=4099408&aid=2627958\")\n      &lt;/script> ') [ RunTime:0.157009s ]
+
+[ 2015-08-17T13:48:24+08:00 ] 127.0.0.1 /index.php/Organize/Video/saveRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `user_admin` [ RunTime:0.002001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_admin` WHERE ( id=39 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 137 行.
+SQL: SHOW COLUMNS FROM `organize_release_mad_1` [ RunTime:0.002000s ]
+SQL: UPDATE `organize_release_mad_1` SET `title`='萌狼第二期',`date`='2015-08-05',`explain`='介绍',`video_url`='http://test.drawmadver2.com/index.php/Organize/Video/addRelease',`password`='ss',`img`='sad' WHERE ( `id` = 3 ) [ RunTime:0.046002s ]
+SQL: SHOW COLUMNS FROM `organize_release_mad_2` [ RunTime:0.008000s ]
+SQL: DELETE FROM `organize_release_mad_2` WHERE ( head_id=3 ) [ RunTime:0.028002s ]
+SQL: INSERT INTO `organize_release_mad_2` (`head_id`,`date`,`author`,`title`,`video_url`,`img`,`password`,`video_code`) VALUES (3,'2015-08-17 13-48-24','作者1','标题1','sads','http://www.drawmad.com/MAD/Modules/Index/Tpl/Public/images/banner2.jpg','','&lt;object type=\"application/x-shockwave-flash\" class=\"player\" data=\"http://static.hdslb.com/play.swf\" width=\"848\" height=\"480\" id=\"player_placeholder\" style=\"visibility: visible;\">\n        &lt;param name=\"allowfullscreeninteractive\" value=\"true\">\n        &lt;param name=\"allowfullscreen\" value=\"true\">\n        &lt;param name=\"quality\" value=\"high\">\n        &lt;param name=\"allowscriptaccess\" value=\"always\">\n        &lt;param name=\"wmode\" value=\"direct\">\n        &lt;param name=\"flashvars\" value=\"cid=4099408&aid=2627958\">\n      &lt;/object>\n      &lt;script type=\"text/javascript\">\n      EmbedPlayer(\'player\', \"http://static.hdslb.com/play.swf\", \"cid=4099408&aid=2627958\")\n      &lt;/script> '),(3,'2015-08-17 13-48-24','作者2','标题2','dasdas','http://www.drawmad.com/MAD/Modules/Index/Tpl/Public/images/banner2.jpg','','&lt;object type=\"application/x-shockwave-flash\" class=\"player\" data=\"http://static.hdslb.com/play.swf\" width=\"848\" height=\"480\" id=\"player_placeholder\" style=\"visibility: visible;\">\n        &lt;param name=\"allowfullscreeninteractive\" value=\"true\">\n        &lt;param name=\"allowfullscreen\" value=\"true\">\n        &lt;param name=\"quality\" value=\"high\">\n        &lt;param name=\"allowscriptaccess\" value=\"always\">\n        &lt;param name=\"wmode\" value=\"direct\">\n        &lt;param name=\"flashvars\" value=\"cid=4099408&aid=2627958\">\n      &lt;/object>\n      &lt;script type=\"text/javascript\">\n      EmbedPlayer(\'player\', \"http://static.hdslb.com/play.swf\", \"cid=4099408&aid=2627958\")\n      &lt;/script> ') [ RunTime:0.055003s ]
+
+[ 2015-08-17T13:48:52+08:00 ] 127.0.0.1 /index.php/Organize/Video/saveRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `user_admin` [ RunTime:0.002001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_admin` WHERE ( id=39 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 137 行.
+SQL: SHOW COLUMNS FROM `organize_release_mad_1` [ RunTime:0.002000s ]
+SQL: UPDATE `organize_release_mad_1` SET `title`='萌狼第二期',`date`='2015-08-05',`explain`='介绍',`video_url`='http://test.drawmadver2.com/index.php/Organize/Video/addRelease',`password`='ss',`img`='sad' WHERE ( `id` = 3 ) [ RunTime:0.038002s ]
+SQL: SHOW COLUMNS FROM `organize_release_mad_2` [ RunTime:0.002000s ]
+SQL: DELETE FROM `organize_release_mad_2` WHERE ( head_id=3 ) [ RunTime:0.027002s ]
+SQL: INSERT INTO `organize_release_mad_2` (`head_id`,`date`,`author`,`title`,`video_url`,`img`,`password`,`video_code`) VALUES (3,'2015-08-17 13-48-52','作者1','标题1','sads','http://www.drawmad.com/MAD/Modules/Index/Tpl/Public/images/banner2.jpg','','<object type=\"application/x-shockwave-flash\" class=\"player\" data=\"http://static.hdslb.com/play.swf\" width=\"848\" height=\"480\" id=\"player_placeholder\" style=\"visibility: visible;\">\n        <param name=\"allowfullscreeninteractive\" value=\"true\">\n        <param name=\"allowfullscreen\" value=\"true\">\n        <param name=\"quality\" value=\"high\">\n        <param name=\"allowscriptaccess\" value=\"always\">\n        <param name=\"wmode\" value=\"direct\">\n        <param name=\"flashvars\" value=\"cid=4099408&amp;aid=2627958\">\n      </object>\n      <script type=\"text/javascript\">\n      EmbedPlayer(\'player\', \"http://static.hdslb.com/play.swf\", \"cid=4099408&aid=2627958\")\n      </script>'),(3,'2015-08-17 13-48-52','作者2','标题2','dasdas','http://www.drawmad.com/MAD/Modules/Index/Tpl/Public/images/banner2.jpg','','<object type=\"application/x-shockwave-flash\" class=\"player\" data=\"http://static.hdslb.com/play.swf\" width=\"848\" height=\"480\" id=\"player_placeholder\" style=\"visibility: visible;\">\n        <param name=\"allowfullscreeninteractive\" value=\"true\">\n        <param name=\"allowfullscreen\" value=\"true\">\n        <param name=\"quality\" value=\"high\">\n        <param name=\"allowscriptaccess\" value=\"always\">\n        <param name=\"wmode\" value=\"direct\">\n        <param name=\"flashvars\" value=\"cid=4099408&amp;aid=2627958\">\n      </object>\n      <script type=\"text/javascript\">\n      EmbedPlayer(\'player\', \"http://static.hdslb.com/play.swf\", \"cid=4099408&aid=2627958\")\n      </script>') [ RunTime:0.058003s ]
+
+[ 2015-08-17T13:49:08+08:00 ] 127.0.0.1 /index.php/Organize/Video/saveRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `user_admin` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_admin` WHERE ( id=39 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 137 行.
+SQL: SHOW COLUMNS FROM `organize_release_mad_1` [ RunTime:0.002000s ]
+SQL: UPDATE `organize_release_mad_1` SET `title`='萌狼第二期',`date`='2015-08-05',`explain`='介绍',`video_url`='http://test.drawmadver2.com/index.php/Organize/Video/addRelease',`password`='ss',`img`='sad' WHERE ( `id` = 3 ) [ RunTime:0.035002s ]
+SQL: SHOW COLUMNS FROM `organize_release_mad_2` [ RunTime:0.002000s ]
+SQL: DELETE FROM `organize_release_mad_2` WHERE ( head_id=3 ) [ RunTime:0.035002s ]
+SQL: INSERT INTO `organize_release_mad_2` (`head_id`,`date`,`author`,`title`,`video_url`,`img`,`password`,`video_code`) VALUES (3,'2015-08-17 13-49-08','作者1','标题1','sads','http://www.drawmad.com/MAD/Modules/Index/Tpl/Public/images/banner2.jpg','','<object type=\"application/x-shockwave-flash\" class=\"player\" data=\"http://static.hdslb.com/play.swf\" width=\"848\" height=\"480\" id=\"player_placeholder\" style=\"visibility: visible;\">\n        <param name=\"allowfullscreeninteractive\" value=\"true\">\n        <param name=\"allowfullscreen\" value=\"true\">\n        <param name=\"quality\" value=\"high\">\n        <param name=\"allowscriptaccess\" value=\"always\">\n        <param name=\"wmode\" value=\"direct\">\n        <param name=\"flashvars\" value=\"cid=4099408&aid=2627958\">\n      </object>\n      <script type=\"text/javascript\">\n      EmbedPlayer(\'player\', \"http://static.hdslb.com/play.swf\", \"cid=4099408&aid=2627958\")\n      </script>'),(3,'2015-08-17 13-49-08','作者2','标题2','dasdas','http://www.drawmad.com/MAD/Modules/Index/Tpl/Public/images/banner2.jpg','','<object type=\"application/x-shockwave-flash\" class=\"player\" data=\"http://static.hdslb.com/play.swf\" width=\"848\" height=\"480\" id=\"player_placeholder\" style=\"visibility: visible;\">\n        <param name=\"allowfullscreeninteractive\" value=\"true\">\n        <param name=\"allowfullscreen\" value=\"true\">\n        <param name=\"quality\" value=\"high\">\n        <param name=\"allowscriptaccess\" value=\"always\">\n        <param name=\"wmode\" value=\"direct\">\n        <param name=\"flashvars\" value=\"cid=4099408&aid=2627958\">\n      </object>\n      <script type=\"text/javascript\">\n      EmbedPlayer(\'player\', \"http://static.hdslb.com/play.swf\", \"cid=4099408&aid=2627958\")\n      </script>') [ RunTime:0.058003s ]
+
+[ 2015-08-17T14:02:14+08:00 ] 127.0.0.1 /Ad
+ERR: 无法加载模块:Ad
+
+[ 2015-08-17T14:12:51+08:00 ] 127.0.0.1 /index.php/Organize/Video/saveRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `user_admin` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_admin` WHERE ( id=39 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 137 行.
+SQL: SHOW COLUMNS FROM `organize_release_mad_1` [ RunTime:0.003000s ]
+SQL: UPDATE `organize_release_mad_1` SET `title`='标题',`date`='2015-07-27',`explain`='介绍',`video_url`='dsa',`password`='asd',`img`='ddd' WHERE ( `id` = 4 ) [ RunTime:0.030002s ]
+SQL: SHOW COLUMNS FROM `organize_release_mad_2` [ RunTime:0.003000s ]
+SQL: DELETE FROM `organize_release_mad_2` WHERE ( head_id=4 ) [ RunTime:0.027002s ]
+SQL: INSERT INTO `organize_release_mad_2` (`head_id`,`date`,`author`,`title`,`video_url`,`img`,`password`,`video_code`) VALUES (4,'2015-08-17 14-12-51','作者1','标题1','sads','asd','',''),(4,'2015-08-17 14-12-51','作者2','标题2','dasdas','asd','','') [ RunTime:0.056003s ]
+

@@ -1,0 +1,373 @@
+[ 2015-08-28T09:46:43+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-28T09:46:46+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-28T09:47:31+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-28T09:48:05+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-28T09:48:21+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-28T09:48:39+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-28T09:49:02+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-28T09:51:58+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-28T09:52:19+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-28T12:01:33+08:00 ] 127.0.0.1 /d
+ERR: 无法加载模块:d
+
+[ 2015-08-28T14:25:18+08:00 ] 127.0.0.1 /html/skins/vodWhite/skin.css
+ERR: 无法加载模块:html
+
+[ 2015-08-28T14:25:18+08:00 ] 127.0.0.1 /html/skins/vodWhite/skin.html
+ERR: 无法加载模块:html
+
+[ 2015-08-28T14:25:18+08:00 ] 127.0.0.1 /html/skins/vodWhite/skin.html.js
+ERR: 无法加载模块:html
+
+[ 2015-08-28T16:33:44+08:00 ] 127.0.0.1 /VideoDetail/addScore
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '4' and user_id = 5000
+ [ RunTime:0.001000s ]
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id = 5000 and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_mad` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_mad` WHERE ( id=5000 ) LIMIT 1   [ RunTime:0.019001s ]
+SQL: SHOW COLUMNS FROM `video_score` [ RunTime:0.017001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `video_score` WHERE ( video_id='10116' and user_id='5000' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `video_score` (`user_id`,`video_id`,`score`,`username`,`time`,`num`) VALUES (5000,10116,'10','wuliao','2015-08-28 16:33:44',1) [ RunTime:0.156009s ]
+SQL: 
+select *, 
+	ROUND(
+	(score_count * avg_score) / (score_count + min_score) + 
+	(min_score * sum_avg_score) / (min_score + score_count)
+	, 2) as avg_rel_score2,
+	
+	ROUND(
+	(18 + sum_score_sing) / (3 + score_count) 
+	, 2) as avg_rel_score
+	from (
+	select sum(num) as score_count, video_id, 
+	cast(avg(score) as decimal(10,2)) as avg_score,
+	sum(score * num) as sum_score_sing
+	from video_score 
+	GROUP BY video_id
+	) a
+	left join (
+		select min(score) as min_score from (
+		select * from (
+		select video_id, count(score) as score
+		from video_score 
+		group by video_id
+		) a
+		order by score desc
+		limit 40
+		) a
+	) b on 1 = 1
+	left join (
+		select sum(sum_count) as sum_count, sum(score) as sum_score, 
+		sum(score) / sum(sum_count) as sum_avg_score
+		from (
+		select count(video_id) as sum_count, video_id, sum(score) as score
+		from video_score 
+		group by video_id
+		) a
+	)c on 1 = 1
+	where video_id = 10116 [ RunTime:0.005001s ]
+
+[ 2015-08-28T16:33:48+08:00 ] 127.0.0.1 /VideoDetail/addScore
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '4' and user_id = 5000
+ [ RunTime:0.001000s ]
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id = 5000 and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `user_mad` [ RunTime:0.002001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_mad` WHERE ( id=5000 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `video_score` [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `video_score` WHERE ( video_id='10116' and user_id='5000' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: INSERT INTO `video_score` (`user_id`,`video_id`,`score`,`username`,`time`,`num`) VALUES (5000,10116,'8','wuliao','2015-08-28 16:33:48',1) [ RunTime:0.034002s ]
+SQL: 
+select *, 
+	ROUND(
+	(score_count * avg_score) / (score_count + min_score) + 
+	(min_score * sum_avg_score) / (min_score + score_count)
+	, 2) as avg_rel_score2,
+	
+	ROUND(
+	(18 + sum_score_sing) / (3 + score_count) 
+	, 2) as avg_rel_score
+	from (
+	select sum(num) as score_count, video_id, 
+	cast(avg(score) as decimal(10,2)) as avg_score,
+	sum(score * num) as sum_score_sing
+	from video_score 
+	GROUP BY video_id
+	) a
+	left join (
+		select min(score) as min_score from (
+		select * from (
+		select video_id, count(score) as score
+		from video_score 
+		group by video_id
+		) a
+		order by score desc
+		limit 40
+		) a
+	) b on 1 = 1
+	left join (
+		select sum(sum_count) as sum_count, sum(score) as sum_score, 
+		sum(score) / sum(sum_count) as sum_avg_score
+		from (
+		select count(video_id) as sum_count, video_id, sum(score) as score
+		from video_score 
+		group by video_id
+		) a
+	)c on 1 = 1
+	where video_id = 10116 [ RunTime:0.004000s ]
+
+[ 2015-08-28T16:33:51+08:00 ] 127.0.0.1 /VideoDetail/addScore
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '4' and user_id = 5000
+ [ RunTime:0.001000s ]
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id = 5000 and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `user_mad` [ RunTime:0.003001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `user_mad` WHERE ( id=5000 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `video_score` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `video_score` WHERE ( video_id='10116' and user_id='5000' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `video_score` (`user_id`,`video_id`,`score`,`username`,`time`,`num`) VALUES (5000,10116,'10','wuliao','2015-08-28 16:33:51',1) [ RunTime:0.027001s ]
+SQL: 
+select *, 
+	ROUND(
+	(score_count * avg_score) / (score_count + min_score) + 
+	(min_score * sum_avg_score) / (min_score + score_count)
+	, 2) as avg_rel_score2,
+	
+	ROUND(
+	(18 + sum_score_sing) / (3 + score_count) 
+	, 2) as avg_rel_score
+	from (
+	select sum(num) as score_count, video_id, 
+	cast(avg(score) as decimal(10,2)) as avg_score,
+	sum(score * num) as sum_score_sing
+	from video_score 
+	GROUP BY video_id
+	) a
+	left join (
+		select min(score) as min_score from (
+		select * from (
+		select video_id, count(score) as score
+		from video_score 
+		group by video_id
+		) a
+		order by score desc
+		limit 40
+		) a
+	) b on 1 = 1
+	left join (
+		select sum(sum_count) as sum_count, sum(score) as sum_score, 
+		sum(score) / sum(sum_count) as sum_avg_score
+		from (
+		select count(video_id) as sum_count, video_id, sum(score) as score
+		from video_score 
+		group by video_id
+		) a
+	)c on 1 = 1
+	where video_id = 10116 [ RunTime:0.002001s ]
+
+[ 2015-08-28T16:54:28+08:00 ] 127.0.0.1 /index.php/MyZone/refreshNotice
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of MyZoneAction::uploadify() should be compatible with PublicAction::uploadify($expand = '') E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '4' and user_id = 5000
+ [ RunTime:0.001000s ]
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id = 5000 and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: tabVal E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 362 行.
+SQL: update user_notice set state = 1
+where id in (
+select a.id from (
+select id from user_notice
+where type =   
+limit 0,
+) a
+
+) [ RunTime:0.052003s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,
+) a
+
+)' at line 6
+ [ SQL语句 ] : update user_notice set state = 1
+where id in (
+select a.id from (
+select id from user_notice
+where type =   
+limit 0,
+) a
+
+)
+
+[ 2015-08-28T16:54:35+08:00 ] 127.0.0.1 /index.php/MyZone/refreshNotice
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of MyZoneAction::uploadify() should be compatible with PublicAction::uploadify($expand = '') E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '4' and user_id = 5000
+ [ RunTime:0.001000s ]
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id = 5000 and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: tabVal E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 362 行.
+SQL: update user_notice set state = 1
+where id in (
+select a.id from (
+select id from user_notice
+where type =   
+limit 0,
+) a
+
+) [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,
+) a
+
+)' at line 6
+ [ SQL语句 ] : update user_notice set state = 1
+where id in (
+select a.id from (
+select id from user_notice
+where type =   
+limit 0,
+) a
+
+)
+

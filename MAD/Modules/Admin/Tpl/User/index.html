@@ -1,0 +1,131 @@
+<include file="Common:head"/>
+
+  <!-- content start -->
+  <div class="admin-content">
+
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">用户管理</strong> / <small>User</small></div>
+    </div>
+
+    <div class="am-g">
+      <div class="am-u-md-6 am-cf">
+        <div class="am-fl am-cf">
+          <div class="am-btn-toolbar am-fl">
+            <!-- <div class="am-btn-group am-btn-group-xs">
+              <button type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span> 新增</button>
+              <button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 保存</button>
+              <button type="button" class="am-btn am-btn-default"><span class="am-icon-archive"></span> 审核</button>
+              <button type="button" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 删除</button>
+            </div> -->
+  <form  method="POST" action="__URL__/index">
+            <div class="am-btn-group am-btn-group-xs">状态</div>
+            <div class="am-form-group am-margin-left am-fl">
+              <select name='select'>
+                {$selectOption}
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="am-u-md-3 am-cf">
+        <div class="am-fr">
+          <div class="am-input-group am-input-group-sm">
+            <input type="text" class="am-form-field" name="search">
+                <span class="am-input-group-btn">
+                  <button class="am-btn am-btn-default" type="submit">搜索</button>
+                </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </form> 
+
+    <div class="am-g">
+      <div class="am-u-sm-12">
+        
+        <form class="am-form" method="POST" action="__URL__/purview"> 
+          <table class="am-table am-table-striped am-table-hover table-main">
+            <thead>
+              <tr>
+                <th class="table-id">ID</th><!-- <th class="table-title">账号</th> --><th class="table-author">昵称</th><th class="table-date">邮箱</th><th class="table-date">视频数</th><th class="table-set">类型</th><th class="table-set">注册时间</th>
+              </tr>
+          </thead>
+          <tbody>
+
+            <foreach name="userList" item="user">
+             <tr> 
+              <td>UID{$user.id}</td>
+              <td><a href="__APP__/MyZone?userid={$user.id}" target="_blank">{$user.nicheng}</a>
+              <td>{$user.email}</td>
+              <td>{$user.video_num}</td>
+              <td>{$user.name_type}</td>
+              <td>{$user.reg_time|date='Y年m月d日', ###}</td>
+              <td>
+                <div class="am-btn-toolbar">
+                  <div class="am-btn-group am-btn-group-xs">
+
+                  <if condition="$user.user_state eq 1">
+                    <a  href="#" class="am-btn am-btn-default am-btn-xs am-text-danger"><span class="am-icon-trash-o"></span> 封禁</a>
+                  <else/>
+                    <a href="#" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span>解封</a>
+                  </if>
+                    <a href="__URL__/purview?userId={$user.id}" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span>权限</a>
+
+                  </div>
+                </div>
+              </td>
+            </tr> 
+
+            </foreach>
+            
+            
+          </tbody>
+        </table>
+        </form>
+ <div class="am-cf">
+ 
+  <div class="am-fr">
+   {$page}
+    
+  </div>
+</div>
+          <hr />
+          <p></p>
+      </div>
+
+    </div>
+  </div>
+  <!-- content end -->
+<include file="Common:foot"/>
+<script type="text/javascript">
+  function tosubmit(userId){
+    var url ="__URL__/purview";
+    /*$.post(url+"/drawmad/index.php/VideoDetail/sendMsg",{content:content, video_id:video_id},function(res){
+      
+      if(res.status == 0){
+        alert(res.data);
+        window.open("http://"+ window.location.host+"/index.php/Login");
+      }else if(res.status == 1){
+        //alert(res.data['video_id']);
+        //document.getElementByID('music0').innerHTML="";
+      }
+    },"json");*/
+
+    $.ajax({
+           type: "POST",
+           url: url,
+           contentType:"application/json",
+           data: JSON.stringify({userId:userId}),//参数列表
+           dataType:"json",
+           success: function(result){
+              //请求正确之后的操作
+              alert(result);
+           },
+           error: function(result){
+              //请求失败之后的操作
+              alert(result);
+           }
+    });
+  }
+
+</script>

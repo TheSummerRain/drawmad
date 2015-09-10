@@ -1,0 +1,145 @@
+<include file="Common:head"/>
+
+  <!-- content start -->
+  <div class="admin-content">
+
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">人员管理</strong> / <small>User</small></div>
+    </div>
+  
+<div class="am-tabs am-margin" data-am-tabs>
+  <ul class="am-nav am-nav-tabs"><!-- am-tabs-nav   class="am-active"-->
+      <li id="tabli1"><a href="__URL__?state=0">未审核</a></li>
+      <foreach name="madGroup" item="group">
+        <li id="tabli{$group.id}" data-id='{$group.id}'><a href="__URL__?state=1&madGroup={$group.id}">{$group.name}</a></li>
+      </foreach>
+    </ul>
+
+
+    <div class="am-tabs-bd">
+    <div class="am-g am-margin-top">
+      <div class="am-u-md-3 am-cf">
+        <div class="am-fl am-cf">
+          <div class="am-input-group am-input-group-sm">
+            <span>UID</span><input type="text" class="am-form-field self-form-field" style="  display: inline-block;width: 70%;float:none;">
+            <span class="am-input-group-btn">
+              <button class="am-btn am-btn-default self-btn-add" ><span class="am-icon-plus"></span>新增</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    
+      <div class="am-u-md-3 am-cf">
+        <form  method="POST" action="__URL__/index">
+          <div class="am-input-group am-input-group-sm">
+            <input type="text" class="am-form-field">
+            <span class="am-input-group-btn">
+              <button class="am-btn am-btn-default" type="submit">搜索</button>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="am-g">
+      <div class="am-u-sm-12">
+        
+        <!-- <form class="am-form" method="POST" action="__URL__/check"> -->
+          <table class="am-table am-table-striped am-table-hover table-main">
+            <thead>
+              <tr>
+                <th class="table-id">UID</th><th class="table-title">昵称</th><th class="table-author">组</th><th class="table-author">操作</th>
+              </tr>
+          </thead>
+          <tbody>
+            
+            <foreach name="userList" item="game">
+             <tr>
+              <td>UID{$game.user_id}</td>
+              <td><a href="#">{$game.nicheng}</a></td>
+              <td>{$game.group_name}</td>
+              <td>
+                <div class="am-btn-toolbar">
+                  <div class="am-btn-group am-btn-group-xs">
+                    <if condition="$_REQUEST[state] eq 0">
+                      
+                      <a href="__URL__/passUser?id={$game.game_mad_user_id}&state=1" class="am-btn am-btn-default am-btn-xs am-text-danger"><span class="am-icon-trash-o"></span> 通过</a>
+                      <a href="__URL__/passUser?id={$game.game_mad_user_id}&state=2" class="am-btn am-btn-default am-btn-xs"><span class="am-icon-trash-o"></span> 拒绝</a>
+                      
+                      <else/>
+                      
+                      <a href="__URL__/modifyGroup?id={$game.game_mad_user_id}" class="am-btn am-btn-default am-btn-xs am-text-danger"><span class="am-icon-trash-o"></span> 修改组</a>
+                    </if>
+                  </div>
+                </div>
+              </td>
+            </tr> 
+
+            </foreach>
+            
+          </tbody>
+        </table>
+        <div class="am-cf">
+          <div class="am-fr">
+          {$page}
+          </div>
+        </div>
+        <hr />
+        <p></p>
+        <!-- </form> -->
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+  <!-- content end -->
+<input type="hidden" id="state" value="{$_REQUEST[state]}">
+<input type="hidden" id="madGroup" value="{$_REQUEST[madGroup]}">
+<include file="Common:foot"/>
+<script type="text/javascript">
+  $(function(){
+    initGroup();
+    addUser();
+
+  });
+
+  function initGroup(){
+    if($('#state').val() == 0){
+      $('#tabli1').addClass('am-active');
+    }else{
+      $('#tabli'+$('#madGroup').val()).addClass('am-active');
+    }
+  }
+
+  function addUser(){
+    $('.self-btn-add').bind('click', function(){
+            
+      if($('.self-form-field').val() == '') return;
+      var url = 'http://'+window.location.host+'/Game/User/addUser';
+      var uid = $('.self-form-field').val();
+      var madGroup = $('#madGroup').val();
+      var state = $('#state').val() == '' ? 0 : $('#state').val();
+      var data = {'uid':uid, 'mad_group':madGroup, 'state':state};
+      
+      $.ajax({
+        type:'POST',
+        url : url ,
+        dataType : 'json',
+        data : data,
+        success:function(res){
+          if(res.status == 0){
+            alert(res.data);
+          }else if (res.status == 1){
+            alert(res.data);
+            window.location.reload();
+          }
+        }
+
+      })
+    })
+  }
+
+
+
+</script>

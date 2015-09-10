@@ -1,0 +1,183 @@
+﻿
+<include file="Common:head"/>
+		
+		<div class="content">
+			<div class="map">
+				<div class="map-rotate">
+					
+					<ul class="map-rotate-ul">
+						<foreach name="homePage" item="home">
+							<if condition="$key eq 0">
+								<li class="playing">
+								<else/>
+								<li>
+							</if>
+								<a  class="map-img" href="{$home.url}" target="__blank">
+									<img src="__PUBLIC__/images/HomePage/{$home.img}">
+								</a>
+								<div class="map-mask">
+									<span>{$home.explain}</span>
+									<div></div>
+								</div>
+							</li>
+						</foreach>
+						<!-- <li class="playing">
+							<a  class="map-img" href="__APP__/Events/eventsRelease?date=New" target="__blank">
+								<img src="__PUBLIC__/images/banner1.jpg">
+							</a>
+						
+							<div class="map-mask">
+								<span>新人战2015即将开战</span>
+								<div></div>
+							</div>
+						</li>
+						<li>
+							<a  class="map-img" href="__APP__/VideoDetail?vid=MAD10140" target="__blank">
+								<img src="__PUBLIC__/images/banner2.jpg">
+							</a>							
+						                            <div class="map-mask">
+								<span>东方合作PV——遥不可及</span>
+								<div></div>
+							</div>
+						</li>
+						<li>
+							<a  class="map-img" href="__APP__/VideoDetail?vid=MAD10143" target="__blank">
+								<img src="__PUBLIC__/images/banner3.jpg">
+							</a>							
+							<div class="map-mask">
+								<span>Re.T新作MEP</span>
+								<div></div>
+							</div>
+						</li> -->
+					</ul>
+					
+					<div class="map-mask-arrow">
+						<span id="arrow-left"></span>
+						<span id="arrow-right"></span>
+					</div>
+				</div>
+				
+				
+			</div>
+
+			<div class="main">
+				<div class="main-left">
+					<div class="main-left-title">
+						<div></div>
+						<h3>推荐作品</h3>
+						<span>当前首页推荐条件为7分以上、评分人数大于3人</span>
+						<a href="__APP__/Video">更多</a>
+					</div>
+
+					<div class="main-left-video main-video">
+						<ul>
+
+							<volist name="videoList" id="v" >
+								<if condition="($key+1) % 4"> 
+									<li class="video-detail video-common">
+									<else/> 
+									<li class="video-detail video-common-other"> 
+								 </if>
+									<a href="__APP__/VideoDetail?vid=MAD{$v.id}" target="_blank"><img src="__PUBLIC__/videos/{$v.fengmian}" alt="封面未找到" class="video_pic"></a>
+									<a class="video-title" href="__APP__/VideoDetail?vid=MAD{$v.id}" target="_blank" class="video-distance" ><h4 class="">{$v.title}</h4></a>
+									<p  class="video-distance video-distance-p">{$v.biaoqian}</p>
+									<div class="video-distance">
+										<div class="score">{$v.score}</div>
+										<div class="msg">
+											<a href="__APP__/MyZone?userid={$v.user_id}" style="text-align:right"><p>By&nbsp;{$v.zuozhe}</p></a>
+											<p>{$v.comments}&nbsp;评论&nbsp;/&nbsp;{$v.collect}&nbsp;收藏</p>
+										</div>
+									</div>
+          						</li>
+							</volist>
+
+						</ul>
+					</div>
+				</div>
+				
+				<div class="main-left">
+					<div class="main-left-title">
+						<div></div>
+						<h3>最新投稿</h3>
+						<a href="__APP__/Video">更多</a>
+					</div>
+
+					<div class="main-left-video main-video">
+						<ul>
+
+							<volist name="videoNew" id="v" >
+								<if condition="($key+1) % 4"> 
+									<li class="video-detail video-common">
+									<else/> 
+									<li class="video-detail video-common-other"> 
+								 </if>
+									<a href="__APP__/VideoDetail?vid=MAD{$v.id}" target="_blank"><img src="__PUBLIC__/videos/{$v.fengmian}" alt="封面未找到" class="video_pic"></a>
+									<a class="video-title" href="__APP__/VideoDetail?vid=MAD{$v.id}" target="_blank" class="video-distance" ><h4 class="">{$v.title}</h4></a>
+									<p  class="video-distance video-distance-p">{$v.biaoqian}</p>
+									<div class="video-distance">
+										<div class="score">{$v.score}</div>
+										<div class="msg">
+											<a href="__APP__/MyZone?userid={$v.user_id}" style="text-align:right"><p>By&nbsp;{$v.zuozhe}</p></a>
+											<p>{$v.comments}&nbsp;评论&nbsp;/&nbsp;{$v.collect}&nbsp;收藏</p>
+										</div>
+									</div>
+          						</li>
+							</volist>
+							
+						</ul>
+					</div>
+				</div>
+
+				<!-- <div class="main-right">
+					<div class="main-right-other">
+						<a href="__URL__/Index/help" target="_blank" class="main-right-help">
+					    <div></div>
+						注册遇到问题？请戳这里
+						</a>
+					    <a href="http://7xifjg.com1.z0.glb.clouddn.com/DrawmadTool(X64) V1.0.rar" class="main-right-help2">
+					    </a>
+					</div>
+				
+				
+					<div class="main-right-new">
+						<div class="main-right-title">
+							<div></div>
+							<h3>最新投稿</h3>
+							<a href="__APP__/Video">更多</a>
+						</div>
+						<div class="main-right-video">
+							<ul>
+								<volist name="videoNew" id="v">
+									<li>
+										<a href="__APP__/VideoDetail?vid=MAD{$v.id}" target="_blank" class="main-right-video-img">	<img src="__PUBLIC__/videos/{$v.fengmian}" alt="封面未找到" >
+										</a>
+										<div class="main-right-video-content">
+											<p>{$v.title}</p>
+											<span>{$v.videoTypeBigName}</span>　
+					                	    <a href="__APP__/MyZone?userid={$v.user_id}" target="_blank">
+											<span style="">By&nbsp;{$v.zuozhe}</span>
+											</a>
+										</div>
+									</li>
+					            </volist>
+								
+							</ul>
+						</div>
+					</div>
+				</div> -->
+
+			</div>
+			
+		</div>
+
+		<div class="message">
+			<div>
+				<label>想要加入MADer大家族吗？ 成功投稿即可成为</label><span>正式会员</span>
+				
+				<div>
+					<a href="__APP__/UpVideo"><input class="input-submit" type="submit" value="投稿" name="" id=""></a>
+				</div>
+			</div>
+		</div>
+		
+<include file="Common:foot"/>

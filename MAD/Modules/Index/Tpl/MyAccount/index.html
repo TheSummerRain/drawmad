@@ -1,0 +1,118 @@
+
+    <link href="__PUBLIC__/css/account.css" rel="stylesheet">
+<div  style="font-size:14px;"><include file="Common:head2"/></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="content_lite300">
+            <div class="user_info">
+
+        <volist name="userInfo" id="vo">
+            
+            <img src="__PUBLIC__/user_head/{$vo.img}" width="120px" height="120px" class="user_img">
+              <h4 class="user_name">{$vo.nicheng}</h4>
+              
+              <form action="__URL__/text" method="post">
+              <input type="text" name="text" placeholder="请输入您的个性签名" class="input_line" value="{$vo.text}">
+                <input type="submit" value="修改签名" class="btn3 btn_green blc mt20">
+               </form>
+
+             <form id="upload" method='post' action="__URL__/uphead" enctype="multipart/form-data" class="mt20">
+               <input type='file'  name='image1' accept=".jpg,.jpeg,.png,.gif">
+                 <input type="submit"  class="btn3 btn_green blc mt20"  value="上传头像(3M)">
+            </form> 
+            </div>
+
+
+			 </volist>
+          </div>
+        </div>
+        <div class="col-xs-6 r-side_border pb60">
+          <div class="content_lite300">
+            <ul class="list_th_con u_contral_rInfo">
+            <volist name="userInfo" id="vo">
+              <li class="w1"><span class="th">UID:</span><span class="con">{$vo.id}</span></li>
+              <li class="w1"><span class="th">邮箱:</span><span class="con">{$vo.email}</span></li>
+              <li class="w1"><span class="th">账号:</span><span class="con">{$vo.username}</span></li>
+              <li class="w1"><span class="th">昵称:</span><span class="con">{$vo.nicheng}</span></li>
+              <li class="w1"><span class="th">身份:</span><span class="con">
+				<if condition="$vo.user_type eq 1">
+              			见习会员
+              		<else />
+              			正式会员
+              		</if>				
+				</span></li>
+			<li class="w1"><span class="th" style="width:100px;">注册时间:</span><span class="con">{$vo.reg_time|date="Y-m-d",###}</span></li>
+              <li class="w1"><span class="th" style="width:100px;">是否显示UID：</span><span class="con">
+			<if condition="$vo['is_uid'] eq 1">
+				<a id="is_uid" href="javascript:void(0)" value="1">显示(点击切换)</a>
+			<else />
+				<a id="is_uid"  href="javascript:void(0)" value="0">隐藏(点击切换)</a>
+			</if>
+				</span></li>
+				<li class="w1"><span class="th" style="width:100px;">是否显示关注：</span><span class="con">
+			<if condition="$vo['is_friend'] eq 1">
+				<a id="is_friend" href="javascript:void(0)" value="1">显示(点击切换)</a>
+      
+			<else />
+				<a id="is_friend"  href="javascript:void(0)" value="0">隐藏(点击切换)</a>
+			</if>
+				</span></li>
+            </volist>
+            </ul>
+<script src="__PUBLIC__/js/lib/jquery-1.11.0.min.js"></script>
+  <script>
+$(function(){
+		$("#is_uid").click(function(){
+			var url ="http://"+ window.location.host;
+
+			$.post(url+"/drawmad/index.php/MyAccount/is_uid",{uid:1},function(res){
+				if(res.status == 0){
+					alert(res.data);
+					document.getElementById('is_uid').innerHTML=res.info;	
+
+				}else{
+					alert('切换失败！若无法解决请联系管理员');	
+				}		
+			},"json");
+		});
+	});
+$(function(){
+    $("#is_friend").click(function(){
+      
+    	var url ="http://"+ window.location.host;
+    	$.post(url+"/drawmad/index.php/MyAccount/is_friend",{is_friend:0},function(res){
+    		if(res.status == 0){
+    			alert(res.data);		
+    			document.getElementById('is_friend').innerHTML=res.info;	
+    		}else{
+    			alert('切换失败！若无法解决请联系管理员');		
+    		}		
+    	},"json");
+    });
+  });
+</script> 
+            <p class="mt30 mb14">修改密码：</p>
+            <form action="__URL__/password" method="post">
+            <ul class="list_th_con up_form">
+              <li class="w3">
+                <label class="th">旧密码：</label><span class="con">
+                  <input type="password" placeholder="6位以上英文或数字" class="input_line" name="oldPassword"></span>
+              </li>
+              <li class="w3">
+                <label class="th">新密码：</label><span class="con">
+                  <input type="password" placeholder="6位以上英文或数字" class="input_line" name="password"></span>
+              </li>
+              <li class="w3">
+                <label class="th">再来遍：</label><span class="con">
+                  <input type="password" placeholder="麻烦你咯" class="input_line" name="rpassword"></span>
+              </li>
+            </ul>
+            <input type="submit" value="修改密码" class="btn3 btn_green blc mt30">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

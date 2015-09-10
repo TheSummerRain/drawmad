@@ -1,0 +1,37 @@
+   <head><meta charset="utf-8" />
+ <script src="__PUBLIC__/js/lib/jquery-1.11.0.min.js"></script>
+<link href="__PUBLIC__/css/main.min.css" rel="stylesheet">
+	<link href="__PUBLIC__/css/video_pl2.css" rel="stylesheet">	
+	<div id="top_fb" style=" position: absolute; top:-250px;"></div>
+	<script>
+	function tz(id,lou){
+		var url ="http://"+ window.location.host;
+		var huifu='<a style="color:blue;" href="'+url+'/index.php/Video/see_pl_all?video_id='+id+'#'+lou+'">转到→</a>';
+		var louceng="回复"+lou+"楼:";
+		 $(window.parent.document).find("#content").val(louceng);
+		 $(window.parent.document).find("#hf_lou").val(huifu);
+		 }
+	</script>
+	<volist name="video_comments" id="pl">
+	<div class="reply_box2">
+	<a href="__APP__/My_zone?{$lm}&userid={$pl.user_id}" target="_banlk">
+	<img src="__PUBLIC__/user_head/{$pl.user_img}" class="face2" />
+	</a>
+    <div class="word_box2" id="{$pl.num_lou}">
+    	<p id="{$pl.id}" class="reply" style="overflow-y:auto;">{$pl.content}</p>
+        <p  class="time">By:{$pl.user_name}　{$pl.time}　{$pl.num_lou}楼</p>
+        
+         <if condition="$shenhe eq 0">
+         	 <script src="__PUBLIC__/js/ajax_pingbi.js"></script>
+       		 <a href="javascript:void(0)" id="pingbi" class="re" onclick="pb_pl({$pl.id},{$vid})">屏蔽</a>
+        <else />
+        </if>
+        
+        <a href="#top_fb" class="re" onclick="tz({$vid},{$pl.num_lou});">回复</a>
+    </div>
+	</div>
+	</volist>
+    <link href="__PUBLIC__/css/page.css" rel="stylesheet">	 
+  <div class="manu">	
+	 {$page}
+ </div>

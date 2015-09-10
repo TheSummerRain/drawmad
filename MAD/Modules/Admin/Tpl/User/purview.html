@@ -1,0 +1,84 @@
+<include file="Common:head"/>
+
+  <!-- content start -->
+  <div class="admin-content">
+
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">权限管理</strong> / <small>Purview</small></div>
+    </div>
+
+<div class="am-tabs am-margin" data-am-tabs>
+   
+        <form class="am-form" method="POST" action="__URL__/updatePurview">
+          <div class="am-g am-margin-top">
+            <div id="roleName" class="am-u-sm-2 am-text-right">
+              用户Id
+            </div>
+            <div class="am-u-sm-4">
+              <input id="roleGroupIdV" type="text" disabled="disabled" class="am-input-sm" name="id" value="UID{$userInfo.id}">
+            </div>
+            <div class="am-u-sm-6"></div>
+          </div>
+
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-2 am-text-right">
+              用户昵称
+            </div>
+            <div class="am-u-sm-4">
+              <input id="roleNameV" type="text" disabled="disabled" class="am-input-sm" name="nicheng" value="{$userInfo.nicheng}">
+            </div>
+            <div class="am-u-sm-6"></div>
+          </div>
+
+          <div class="am-g am-margin-top-sm">
+            <div class="am-u-sm-2 am-text-right">
+              权限编辑
+            </div>
+            
+
+            <input type="hidden" name="userId" value="{$userInfo.id}">
+            <input type="hidden" name="userType" value="ut{$userInfo.user_type}">
+            <input type="hidden" name="roleGroupIds" value="{$userInfo.role_group_id}" id="roleGroupIds">
+            <!-- <div class="am-u-sm-4 current_purview_id" style="display:inline-block">
+              <foreach name="roleGroupList" item="role">
+                <div style="display:inline-block">
+                  <input type="checkbox" id="PPID{$role.id}" value="{$role.id}" name="role[]" class="type_checkbox" >
+                  <label class="check" style=" font-weight:normal">{$role.name}</label>
+                </div>
+              </foreach>
+            </div> -->
+
+            <div class="am-u-sm-4 current_purview_id" style="display:inline-block">
+              <foreach name="userTypeList" item="usert">
+                <div style="display:inline-block; margin-right:10px;">
+                  <input type="radio" id="ut{$usert.id}" value="{$usert.id}" name="userTypeReal" class="type_radio" >
+                  <label class="check" for="ut{$usert.id}" style=" font-weight:normal">{$usert.type}</label>
+                </div>
+              </foreach>
+            </div>
+
+            <div class="am-u-sm-6"></div>
+            </div>
+             <div class="am-margin">
+              <input type="submit" name="" value="提交保存" class="am-btn am-btn-primary am-btn-sm am-fl">
+            </div>
+    
+          </div>
+        </form>
+  </div>
+
+  <!-- content end -->
+<include file="Common:foot"/>
+<script type="text/javascript">
+  $(document).ready(function(){
+
+      var roidGroupIdsV = $('#roleGroupIds').val().split(',');
+      for(var i=0; i< roidGroupIdsV.length; i++){
+          $('#PPID'+roidGroupIdsV[i]).prop('checked', true);
+      }
+
+      $('#'+$('input[name=userType]').val()).attr("checked",'checked');
+
+  })
+
+</script>

@@ -1,0 +1,50 @@
+.tab_content label{
+	display: block;
+	height: 22px;
+	line-height:22px;
+	font-size: 14px;
+	color:#666;
+}
+			.tab_content label a{font-size: 14px;color:#666;}
+			.tab_content label:before{
+				content: ' ';display: inline-block;width: 10px;height: 10px;background: #ccc;border: 1px solid #999;border-radius: 2px;margin-right: 10px;
+			}
+			.tab_content label:hover:before{background: #45b860;}
+			.tab_content input{display: none;}
+			.tab_content > li {
+			  display: none;
+			}
+			.tab_content > li.active {
+			  display: block;
+			}
+			.type_checkbox:checked + .check:before{
+				background-color: #45b860;
+				border-color: #8fc31f;
+			}
+			.type_checkbox:checked +.check{
+				color: #45b860;
+			}
+			.tab_btn {
+				border-bottom: 1px solid #ccc;
+				display: block;
+				margin-bottom: 15px;
+				font-size: 14px;
+			}
+			.tab_btn:after {
+				content: '';
+				clear: both;
+				visibility: hidden;
+				display: block;
+			}
+			.tab_btn > li {
+				float: left;
+				width: 25%;
+				text-align: center;
+				height: 33px;
+				line-height: 33px;
+				cursor: pointer;
+			}
+			.tab_btn > li.active {
+				border-bottom: 2px solid #45b860;
+				font-weight: bold;
+			}

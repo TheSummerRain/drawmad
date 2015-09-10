@@ -1,0 +1,74 @@
+﻿<include file="Common:head"/>
+	<link rel="stylesheet" href="__PUBLIC__/css/login.css"/>
+	<style type="text/css">
+		.content-box{
+			height:360px;
+			text-align: center;
+			margin: 120px auto 140px auto;
+		}
+		.content-bottom{
+			width: 320px;
+			text-align: center;
+			margin:50px 0 0 140px;
+		}
+		.content-input {
+			text-align: left;
+		}
+
+	</style>
+	<script type='text/javascript'>
+	var xml;
+	function checkUser(myValue,name){
+
+		var url="http://"+ window.location.host+"/index.php/BackPassword/check?"+name+"="+myValue;
+		spanname = name;
+		xml=new XMLHttpRequest();
+		xml.onreadystatechange=state_Change;
+		xml.open('post',url,true);
+		xml.send();
+	}
+	function state_Change()
+	{
+		if (xml.readyState==4)
+		{
+			if (xml.status==200)
+			{
+				$('#'+spanname).next('label').text(xml.responseText);
+				//document.getElementById(spanname).innerHTML=xml.responseText;
+			}
+			else
+			{
+				alert("Problem retrieving data:" + xml.statusText);
+			}
+		}
+	}
+</script>
+
+		<div class="content">
+			<div class="content-box">
+
+           		<form method="post" action="__URL__/update">
+				<input type="hidden"  name="userId" value="{$userId}">
+				<input type="hidden"  name="emailId" value="{$emailId}">
+				<div class="content-bottom">
+					<div class="content-input">
+						<h3>请填写新密码</h3>
+						<input type="password" id="password" name="password" onkeyup="checkUser(this.value,this.name)">
+						<label for="email"></label>
+					</div>
+					<div class="content-input">
+						<h3>确认新密码</h3>
+						<input type="password" id="rpassword" name="rpassword" onkeyup="checkUser(this.value,this.name)">
+						<label for="email"></label>
+					</div>
+
+					<div class="content-submit">
+						<input class="input-submit" type="submit" value="提交" name="" id="">
+					</div>
+				</div>
+				</form>
+			</div>
+		</div>
+		
+		
+<include file="Common:foot"/>

@@ -1,0 +1,1620 @@
+[ 2015-08-27T09:05:44+08:00 ] 127.0.0.1 /d
+ERR: 无法加载模块:d
+
+[ 2015-08-27T09:18:08+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-27T09:18:08+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T09:19:11+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-27T09:19:11+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T09:22:18+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-27T09:22:18+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T13:36:54+08:00 ] 127.0.0.1 /index.php/MyZone/refreshNotice
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of MyZoneAction::uploadify() should be compatible with PublicAction::uploadify($expand = '') E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '4' and user_id = 5000
+ [ RunTime:0.001000s ]
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id = 5000 and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.005000s ]
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: tabVal E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 362 行.
+SQL: update user_notice set state = 1
+where id in (
+select a.id from (
+select id from user_notice
+where type =   
+limit 0,
+) a
+
+) [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,
+) a
+
+)' at line 6
+ [ SQL语句 ] : update user_notice set state = 1
+where id in (
+select a.id from (
+select id from user_notice
+where type =   
+limit 0,
+) a
+
+)
+
+[ 2015-08-27T13:36:59+08:00 ] 127.0.0.1 /MAD/Modules/Index/Tpl/Public/user_head/
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T13:36:59+08:00 ] 127.0.0.1 /index.php/MyZone/refreshNotice
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of MyZoneAction::uploadify() should be compatible with PublicAction::uploadify($expand = '') E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+ [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+selec' at line 5
+ [ SQL语句 ] : select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc' at line 4
+ [ SQL语句 ] : select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc
+
+[ 2015-08-27T13:39:45+08:00 ] 127.0.0.1 /MAD/Modules/Index/Tpl/Public/user_head/
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T13:39:45+08:00 ] 127.0.0.1 /index.php/MyZone/refreshNotice
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of MyZoneAction::uploadify() should be compatible with PublicAction::uploadify($expand = '') E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+ [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+selec' at line 5
+ [ SQL语句 ] : select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc' at line 4
+ [ SQL语句 ] : select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc
+
+[ 2015-08-27T13:41:57+08:00 ] 127.0.0.1 /MAD/Modules/Index/Tpl/Public/user_head/
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T13:41:57+08:00 ] 127.0.0.1 /index.php/MyZone/refreshNotice
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of MyZoneAction::uploadify() should be compatible with PublicAction::uploadify($expand = '') E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+ [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+selec' at line 5
+ [ SQL语句 ] : select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc' at line 4
+ [ SQL语句 ] : select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc
+
+[ 2015-08-27T13:48:28+08:00 ] 127.0.0.1 /__APP__/Login
+ERR: 无法加载模块:__APP__
+
+[ 2015-08-27T13:48:42+08:00 ] 127.0.0.1 /index.php/MyZone/refreshNotice
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of MyZoneAction::uploadify() should be compatible with PublicAction::uploadify($expand = '') E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '4' and user_id = 5000
+ [ RunTime:0.001000s ]
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id = 5000 and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: tabVal E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 362 行.
+SQL: update user_notice set state = 1
+where id in (
+select a.id from (
+select id from user_notice
+where type =   
+limit 0,
+) a
+
+) [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,
+) a
+
+)' at line 6
+ [ SQL语句 ] : update user_notice set state = 1
+where id in (
+select a.id from (
+select id from user_notice
+where type =   
+limit 0,
+) a
+
+)
+
+[ 2015-08-27T13:50:41+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-27T13:50:41+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T13:50:50+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T13:50:50+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-27T13:51:07+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-27T13:51:07+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T13:51:15+08:00 ] 127.0.0.1 /VideoDetail/collect
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+ [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+selec' at line 5
+ [ SQL语句 ] : select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc' at line 4
+ [ SQL语句 ] : select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc
+
+[ 2015-08-27T13:51:24+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-27T13:51:24+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T13:57:30+08:00 ] 127.0.0.1 /VideoDetail/collect
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '4' and user_id = 5000
+ [ RunTime:0.001000s ]
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id = 5000 and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `video_collect` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `video_collect` WHERE ( `video_id` = 10013 ) AND ( `user` = 'wuliao' ) AND ( `user_id` = 5000 )  [ RunTime:0.000000s ]
+SQL: INSERT INTO `video_collect` (`video_id`,`user`,`user_id`,`collect_date`) VALUES (10013,'wuliao',5000,'2015-08-27 13:57:30') [ RunTime:0.035002s ]
+
+[ 2015-08-27T13:57:35+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-27T13:57:35+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T13:59:17+08:00 ] 127.0.0.1 /VideoDetail/collect
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+ [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+selec' at line 5
+ [ SQL语句 ] : select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc' at line 4
+ [ SQL语句 ] : select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc
+
+[ 2015-08-27T13:59:27+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-27T13:59:27+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T13:59:27+08:00 ] 127.0.0.1 /VideoDetail/collect
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+ [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+selec' at line 5
+ [ SQL语句 ] : select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc' at line 4
+ [ SQL语句 ] : select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc
+
+[ 2015-08-27T14:04:25+08:00 ] 127.0.0.1 /VideoDetail/collect
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+ [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+selec' at line 5
+ [ SQL语句 ] : select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc' at line 4
+ [ SQL语句 ] : select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc
+
+[ 2015-08-27T14:05:27+08:00 ] 127.0.0.1 /VideoDetail/collect
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+ [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+selec' at line 5
+ [ SQL语句 ] : select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc' at line 4
+ [ SQL语句 ] : select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc
+
+[ 2015-08-27T14:05:43+08:00 ] 127.0.0.1 /VideoDetail/collect
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+ [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+selec' at line 5
+ [ SQL语句 ] : select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc' at line 4
+ [ SQL语句 ] : select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc
+
+[ 2015-08-27T14:06:52+08:00 ] 127.0.0.1 /VideoDetail/collect
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+ [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+selec' at line 5
+ [ SQL语句 ] : select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc' at line 4
+ [ SQL语句 ] : select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc
+
+[ 2015-08-27T14:07:12+08:00 ] 127.0.0.1 /VideoDetail/collect
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+ [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+selec' at line 5
+ [ SQL语句 ] : select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc' at line 4
+ [ SQL语句 ] : select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc
+
+[ 2015-08-27T14:25:28+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-27T14:25:42+08:00 ] 127.0.0.1 /VideoDetail/collect
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+ [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+selec' at line 5
+ [ SQL语句 ] : select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc' at line 4
+ [ SQL语句 ] : select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc
+
+[ 2015-08-27T14:25:44+08:00 ] 127.0.0.1 /VideoDetail/collect
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+ [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+selec' at line 5
+ [ SQL语句 ] : select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc' at line 4
+ [ SQL语句 ] : select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc
+
+[ 2015-08-27T14:27:24+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-27T14:27:24+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T14:27:37+08:00 ] 127.0.0.1 /VideoDetail/collect
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+ [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+selec' at line 5
+ [ SQL语句 ] : select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc' at line 4
+ [ SQL语句 ] : select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc
+
+[ 2015-08-27T14:27:42+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-27T14:27:42+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T14:28:24+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-27T14:28:24+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T14:28:27+08:00 ] 127.0.0.1 /VideoDetail/collect
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+ [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+selec' at line 5
+ [ SQL语句 ] : select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc' at line 4
+ [ SQL语句 ] : select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc
+
+[ 2015-08-27T14:32:03+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-27T14:32:03+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T14:32:07+08:00 ] 127.0.0.1 /VideoDetail/collect
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+ [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+selec' at line 5
+ [ SQL语句 ] : select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc' at line 4
+ [ SQL语句 ] : select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc
+
+[ 2015-08-27T14:32:10+08:00 ] 127.0.0.1 /VideoDetail/collect
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+ [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+selec' at line 5
+ [ SQL语句 ] : select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc' at line 4
+ [ SQL语句 ] : select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc
+
+[ 2015-08-27T14:32:18+08:00 ] 127.0.0.1 /VideoDetail/collect
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+ [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+selec' at line 5
+ [ SQL语句 ] : select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc' at line 4
+ [ SQL语句 ] : select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc
+
+[ 2015-08-27T14:32:25+08:00 ] 127.0.0.1 /VideoDetail/addFans
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+ [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+selec' at line 5
+ [ SQL语句 ] : select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc' at line 4
+ [ SQL语句 ] : select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc
+
+[ 2015-08-27T14:32:34+08:00 ] 127.0.0.1 /VideoDetail/addFans
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+ [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+selec' at line 5
+ [ SQL语句 ] : select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc' at line 4
+ [ SQL语句 ] : select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc
+
+[ 2015-08-27T14:32:59+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-27T14:32:59+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T14:33:01+08:00 ] 127.0.0.1 /VideoDetail/addFans
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+ [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+selec' at line 5
+ [ SQL语句 ] : select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 
+) and type = '4' and user_id = 
+
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc' at line 4
+ [ SQL语句 ] : select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id =  and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc
+
+[ 2015-08-27T14:33:10+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-27T14:33:10+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T14:33:27+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-27T16:36:00+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-27T16:36:00+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T16:38:43+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-27T16:38:43+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T16:38:48+08:00 ] 127.0.0.1 /index.php/MyZone/refreshNotice
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of MyZoneAction::uploadify() should be compatible with PublicAction::uploadify($expand = '') E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '4' and user_id = 5000
+ [ RunTime:0.001000s ]
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id = 5000 and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: pageLimit E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 354 行.
+NOTIC: [8] Undefined index: tabVal E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 362 行.
+SQL: update user_notice set state = 1
+where id in (
+select a.id from (
+select id from user_notice
+where type =   
+limit 0,
+) a
+
+) [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,
+) a
+
+)' at line 6
+ [ SQL语句 ] : update user_notice set state = 1
+where id in (
+select a.id from (
+select id from user_notice
+where type =   
+limit 0,
+) a
+
+)
+
+[ 2015-08-27T16:38:51+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-08-27T17:12:36+08:00 ] 127.0.0.1 /MAD/Modules/Index/Tpl/Public/player/sewise.player.min.js?server=vod&type=flv&videourl=http://test.drawmad2.com//MAD/Modules/Index/Tpl/Public/videos/id_5000_num_6.flv&sourceid=&autostart=false&starttime=0&lang=en_US&logo=1&title=%E6%A0%87%E9%A2%98222&buffer=5&skin=vodWhite
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T17:13:12+08:00 ] 127.0.0.1 /MAD/Modules/Index/Tpl/Public/player/sewise.player.min.js?server=vod&type=flv&videourl=http://test.drawmad2.com/MAD/Modules/Index/Tpl/Public/videos/id_5000_num_6.flv&sourceid=&autostart=false&starttime=0&lang=en_US&logo=1&title=%E6%A0%87%E9%A2%98222&buffer=5&skin=vodWhite
+ERR: 无法加载模块:MAD
+
+[ 2015-08-27T17:18:37+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+

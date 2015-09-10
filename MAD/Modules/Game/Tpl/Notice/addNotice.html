@@ -1,0 +1,52 @@
+<include file="Common:head"/>
+<style type="text/css">
+  #user-intro{
+      resize: none;
+  }
+</style>
+  <!-- content start -->
+  <div class="admin-content">
+
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">通知增加</strong> / <small>addNotice</small></div>
+    </div>
+
+<div class="am-tabs am-margin" data-am-tabs>
+   
+        <form class="am-form" method="POST" action="__URL__/saveNotice">
+          <div class="am-g am-margin-top">
+            <div id="roleName" class="am-u-sm-2 am-text-right">
+              消息Id
+            </div>
+            <div class="am-u-sm-4">
+              <input id="roleGroupIdV" type="text" disabled="disabled" class="am-input-sm" name="id" value="NT{$noticeId}">
+            </div>
+            <div class="am-u-sm-6"></div>
+          </div>
+
+          <input type="hidden" value="{$noticeId2}" name="noticeId2">
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-2 am-text-right">
+              内容
+            </div>
+            <div class="am-u-sm-9">
+              <textarea class="" rows="5" id="user-intro" name="message" placeholder="输入通知内容" >{$noticeMessage}</textarea>
+              <!-- <small>250字以内写出你的一生...</small> -->
+            </div>
+            <div class="am-u-sm-6"></div>
+          </div>
+
+            <div class="am-margin">
+              <input type="submit" name="" value="提交保存" class="am-btn am-btn-primary am-btn-sm am-fl">
+            </div>
+    
+          </div>
+        </form>
+  </div>
+
+  <!-- content end -->
+<include file="Common:foot"/>
+<script type="text/javascript">
+
+
+</script>

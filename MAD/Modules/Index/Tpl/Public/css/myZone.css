@@ -1,0 +1,566 @@
+﻿.content{
+   width: 100%;
+}
+    .content-top-wrap{
+      background: #fff;
+      margin:0 auto;
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+    }
+      .content-top{
+        width: 1000px;
+        height: 200px;
+        margin:0 auto;
+      }
+        .content-top .content-left{
+          font-size: 14px;
+          color:#999;
+          float: left;
+          position: relative;
+          margin-top: 60px;
+        }
+          .user-head{
+            display: inline-block;
+            overflow: hidden; 
+            
+            height: 100px;
+            width: 100px;
+            border-radius: 49px;
+            position: absolute;
+            left: 45px;
+            top: -10px;
+            cursor: pointer;
+          }
+          .user-head img{
+            height: 98px;
+            width: 98px;
+            border:1px solid #ccc;
+            border-radius: 49px;
+            position: absolute;
+            cursor: pointer;
+          }
+          #image1{
+
+            height: 100px;
+            width: 100px;
+            left: 45px;
+            top: -10px;
+            position: absolute;
+            opacity: 0;
+            display: none;
+          }
+          /* .user-head:hover+.user-head-wrap{
+            display: block;
+          }
+          
+          .user-head-wrap:hover{
+            display: block;
+          }  */
+          .content-left .user-head-wrap{
+            height: 100px;
+            width: 100px;
+            border-radius: 49px;
+            position: absolute;
+            left: 45px;
+            top: -10px;
+            cursor: pointer;
+            display: none;
+          }
+          .content-left .user-head-mask{
+            height: 98px;
+            width: 98px;
+            border:1px solid #ccc;
+            border-radius: 49px;
+            position: absolute;
+            cursor: pointer;
+            background: black;
+            opacity: 0.5;
+          }
+          .content-left .user-head-content{
+            height: 98px;
+            width: 98px;
+            border:1px solid #ccc;
+            border-radius: 49px;
+            position: absolute;
+            color:#FFF;
+            line-height: 100px;
+            text-align: center;
+            cursor: pointer;
+          }
+
+          .content-top .content-left h3{
+            font-size:20px;
+            color: #333;
+            height: 20px;
+            line-height: 20px;
+          }
+          .content-top .content-left span{
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 25px;
+            width:210px;
+            word-break:break-all;
+            display: inline-block;
+          }
+          .content-top .head-explan{
+            display: inline-block;
+            margin-left: 160px;
+            position: relative;
+            height: 80px;
+          }
+          .content-top .head-explan-a{
+            background: #61c7d5;
+            width: 40px;
+            height:18px;
+            line-height: 18px;
+            color: #fff;
+            display: inline-block;
+            text-align: center;
+            border-radius: 15px;
+            position: absolute;
+            right: -50px;
+            bottom: 5px;
+          }
+          .content-top .head-explan textarea{
+              width: 198px;
+              height: 40px;
+              border: 1px solid #ccc;
+              resize: none;
+              padding: 5px;
+              margin-top: 15px;
+              display:none;
+          }
+
+        .content-top .content-right{
+          float: right;
+          overflow: hidden;
+          font-size:14px;
+          color:#999;
+          height: 70px;
+          margin-top: 65px;
+        }
+           .user-uid, .user-friend,.user-upvideo{
+            float: left;
+            margin-right: 40px;
+          }
+          .content-top .user-upvideo{
+            margin-right: 70px;
+            height: 68px;
+            width: 68px;
+            border: 1px solid #45b860;
+            background: #45b860;
+            border-radius: 34px;
+            text-align: center;
+            line-height: 68px;
+            color: #fff;
+            font-size:18px;
+            font-weight: bold;
+          }
+          .content-top .content-right span{
+            color: #333;
+            margin-right: 10px;
+          }
+          .content-top .content-right label{
+            font-size:32px;
+            font-family: 'BEBAS.TTF';
+          }
+          .content-top .content-right p{
+            margin-top: 10px;
+          }
+          .content-top .user-uid label{
+            color: #61c7d5;
+          }
+          .content-top .user-friend label{
+            color: #ffa415;
+          }
+      .content-bottom{
+          width:1000px;
+          margin: 0 auto;
+          overflow: hidden;
+          margin-bottom: 60px;
+      }
+        .directory-left{
+          width:155px;
+          float:left;
+          height: 1025px;
+          overflow: hidden;
+        }
+        .directory-left ul{
+          border:1px solid #ccc;
+          border-top: 0;
+          text-align: center;
+          padding-top: 50px;
+          height: 974px;
+        }
+        .directory-left li{
+
+        }
+        .directory-left ul li a{
+          color:#666;
+          font-size: 16px;
+          height: 45px;
+          line-height: 45px;
+          width:155px;
+          display: inline-block;
+        }
+        .directory-left .directory-active{
+          color:#333;
+          background: #fff;
+          width:149px;
+          border-top: 1px solid #ccc;
+          border-bottom: 1px solid #ccc;
+          border-left: 5px solid #45b860;
+        }
+        .directory-right{
+          background: #fff;
+          width:779px;
+          float:right;
+          overflow: hidden;
+          padding: 50px 0 0 65px;
+          border-right:1px solid #ccc;
+          border-bottom:1px solid #ccc;
+          height: 974px;
+        }
+        
+        .main-video{
+          height: 720px;
+          padding-bottom: 165px;
+        }
+        .main-left-video{
+          margin: 0;
+        }
+        .main-left-video>ul{
+            overflow: hidden;
+        }
+        .main-left-video .video-distance .score{
+          font-size: 12px;
+          height: 12px;
+          line-height: 12px;
+          font-family: '微软雅黑','Hiragino Sans GB';
+          float: none;
+        }
+        .main-left-video .video-distance .msg{
+          float: none;
+          text-align: left;
+        }
+        .main-left-video .video-detail{
+          position: relative;
+        }
+        .main-left-video .video-distance{
+          position: relative;
+        }
+        .main-left-video .video-distance p{
+          margin-top: 8px;
+          text-align: left;
+        }
+        .head-explan-common{
+            background: #61c7d5;
+            width: 40px;
+            height:18px;
+            line-height: 18px;
+            color: #fff;
+            display: inline-block;
+            text-align: center;
+            border-radius: 15px;
+            padding:0;
+        }
+        .main-left-video ul li{
+          position: relative;
+        }
+        .main-left-video ul li .user-head img{
+          height: 68px;
+          width: 68px;
+          left: 0;
+          top: 0;
+        }
+        .main-left-video .video-distance .video-distance-b{
+            margin-left: 20px;
+            position: absolute;
+            bottom:0;
+            right: 0;
+            width: 65px;
+        }
+        .main-left-video .video-img{
+          position: relative;
+        }
+        .video-img:hover + .delvideo {
+          display: block;
+        }
+
+        .delvideo:hover{
+          display: block;
+        }
+
+        .delvideo{
+          position: absolute;
+          width:20px;
+          height:20px;
+          background: url(../images/delvideo.png);
+          top: 0;
+          right: 55px;
+          z-index: 1;
+          display: none;
+          cursor: pointer;
+        }
+        /* 粉丝 */
+        .main-left-video .main-video-li{
+          width: 345px;
+          height: 70px;
+        }
+        .main-left-video .head-explan-div{
+          margin-left: 85px;
+        }
+        .main-left-video .head-explan-div>h3{
+          font-size: 18px;
+          color: #333;
+          position: absolute;
+          top: 8px;
+        }
+        .main-left-video .user-friend-a{
+          height: 70px;
+          position: relative;
+        }
+        .main-left-video .head-explan-div>a{
+          font-size: 14px;
+          position: absolute;
+          bottom:0;
+        }
+        .main-left-video .head-explan-aa{
+            background: #61c7d5;
+            width: 40px;
+            height:18px;
+            line-height: 18px;
+            color: #fff;
+            display: inline-block;
+            text-align: center;
+            border-radius: 15px;
+            padding:0;
+        }
+
+        .main-left-video .head-explan-dd{
+          background: #45b860;
+          width: 40px;
+          height:18px;
+          line-height: 18px;
+          color: #fff;
+          display: inline-block;
+          text-align: center;
+          border-radius: 15px;
+          padding:0;
+        }
+        .main-left-video .head-explan-bb{
+          color: #999;
+          left: 135px;
+        }
+        .main-left-video .head-explan-cc{
+          color:#61c7d5;
+          left: 135px;
+        }
+        .manu{
+          margin-bottom: 61px;
+        }
+        /* 消息 */
+        .video-comment-list{
+          overflow: hidden;
+          height: 720px;
+          padding-bottom: 165px;
+          display: none;
+          position: relative;
+        }
+
+        .video-comment-list .comment{
+          height:70px;
+          border-bottom: 1px solid #ccc;
+          padding: 20px 0;
+        }
+        .comment-left{
+          float: left;
+        }
+        .comment-left img{
+          width:70px;
+          height:70px;
+          border-radius: 35px;
+          vertical-align: middle;
+        }
+        .comment-right{
+          overflow: hidden;
+          position: relative;
+        }
+        .comment-right ul{
+          margin-left:30px;
+          font-size: 14px;
+          color:#999;
+          overflow: hidden;
+          height: 92px;
+        }
+        .comment-right li{
+          position: relative;
+          
+        }
+        .directory-right .video-comment-activity{
+          display: block;
+        }
+        .comment-right .comment-title>div{
+          height: 14px;
+          line-height: 14px;
+          font-size: 14px;
+          color:#45b860;
+         /*  position: absolute;
+         top: 0px; */
+        }
+        .comment-right .comment-content{
+          font-size: 14px;
+          color:#333;
+          height: 58px;
+          margin-top: 10px;
+           /* line-height: 58px;  */
+        }
+        .comment-right .comment-date{
+          position: absolute;
+          bottom: 4px; 
+        }
+        .comment-right .comment-date>div{
+          height: 12px;
+          line-height: 12px;
+          font-size: 12px;
+          color:#999;
+
+        }
+        .comment-right .comment-control{
+          color:#999;
+          font-size:14px;
+          height: 14px;
+          line-height: 14px;
+          position: absolute;
+          bottom: 5px;
+          right: 0;
+        }
+        .comment-right .comment-control>a{
+          font-size:14px;
+          height: 14px;
+          line-height: 14px;
+          color:#61c7d5;
+        }
+        .comment-right .comment-control-del{
+          margin-right: 35px;
+        }
+        .comment-right .comment-control-return{
+          cursor:pointer;
+        }
+        .comment-right-notice ul{
+          margin:0;
+        }
+        .video-comment-title{
+          overflow: hidden;
+        }
+        .video-comment-title ul{
+          overflow: hidden;
+          height: 35px;
+          line-height: 35px;
+          border: 1px solid #ccc;
+          padding-left: 35px;
+          border-radius: 35px;
+        }
+        .video-comment-title li{
+          float: left;
+          margin-right: 65px;
+          cursor: pointer;
+        }
+        .video-comment-title li.activity{
+          font-weight: bold;
+        }
+        .video-comment-title li.activity:before{
+          content:'';
+          border-left: 4px solid #8fc31f;
+          border-radius: 4px;
+          padding-right: 8px;
+        }
+
+        .comment-right-notice .comment-title>div{
+          font-size: 12px;
+          color:#999;
+        }
+         .comment-right-notice .comment-title .comment-title-name{
+          color:#ffa415;
+        }
+        .comment-right-notice .comment-control a{
+          color:#999;
+        }
+        .comment-title-name{
+          margin-left: 20px;
+        }
+        /* 账号 */
+        .main-account li{
+          font-size: 14px;
+          height: 24px;
+          line-height: 24px;
+          color:#333;
+        }
+        .main-account .main-account-ul{
+          padding-bottom: 59px;
+          position:relative;
+          border-bottom:1px dashed #ccc;
+        }
+        .main-account .main-split-img{
+          color: #fff;
+          width: 65px;
+          height:18px;
+          line-height: 18px;
+          border-radius: 18px;
+          background: #45b860;
+          text-align: center;
+          position: absolute;
+          bottom: -9px;
+        }
+        
+        .main-account .main-detail{
+          margin-top: 35px;
+        }
+        .main-account .main-detail>input{
+          font-size: 18px;
+          width:120px;
+          height:35px;
+          background: #45b860;
+          color:#FFF;
+          border: 0;
+          padding: 0;
+        }
+        .main-account .main-input{
+          margin-bottom: 20px;
+        }
+        .main-account .main-input>input{
+          text-align: left;
+        }
+        .main-account .main-input>h3{
+          color:#333;
+          font-size:16px;
+          height: 26px;
+        }
+        
+        .head-explan-avideo{
+          position:absolute;
+          right: 0;
+          bottom: 0;
+        }
+        .main-detail .main-input label{
+          color:#ffa415;
+          padding-left: 10px;
+        }
+        .video-common-aa{padding: 0 50px 50px 0;}
+        .video-common{padding: 0 55px 40px 0;}
+        .video-common-other{padding: 0 0 40px 0;}
+        .notice-page{
+          position: absolute;
+          bottom: -50px;
+          left: 43%;
+        }
+        .copy-tips{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: 5;
+          color:#45b860;
+          font-weight: bold;
+          font-size: 20px;
+        }
+        

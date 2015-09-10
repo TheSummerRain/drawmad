@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新人战</title>
+	<link rel="stylesheet" href="__PUBLIC__/css/resert.css"/>
+	<script src="__PUBLIC__/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="__PUBLIC__/css/xinrenMain.css"/>
+	
+</head>
+<body>
+
+<div class="wrap">
+	<header >
+		<div class="topleft">
+			<span>返回</span>
+			<a href="__APP__">DRAWMAD</a>
+		</div>
+		<div class="topright">
+
+			<if condition="$_SESSION[id] eq null">
+				<img src="__PUBLIC__/user_head/nohead.png" alt="">
+				
+			<else/>
+				<span>{$_SESSION['nicheng']}</span>
+				<img src="__PUBLIC__/user_head/{$_SESSION[img]}" alt="">
+			</if>
+		</div>
+	</header>
+
+</div>
+	
+<div class="banner">
+	<!-- <img src="__PUBLIC__/images/xinrenbanner.png" alt=""> -->
+	<div class="xinrenbanner"></div>
+	<div class="xinrenbanner2">
+		<a id="countDown"></a>
+		<a href="__APP__/Events" class="fight">战斗规则</a>
+		<a href="__APP__/Events/sign" class="sign">报名投稿</a>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		updateEndTime();
+
+	});
+
+	function updateEndTime(){
+		var date = new Date();
+		var time = date.getTime();
+		var endDate = new Date('2015-8-10');
+
+		/*var endDate1 = eval('new Date(' + endDate.replace(/\d+(?=-[^-]+$)/, function (a) { return parseInt(a, 10) - 1; }).match(/\d+/g) +')');*/
+		var endTime = endDate.getTime(); 
+		var lag = (endTime - time) / 1000; //当前时间和结束时间之间的秒数
+		if(lag > 0)
+		{
+			var second = Math.floor(lag % 60); 
+			var minite = Math.floor((lag / 60) % 60);
+			var hour = Math.floor((lag / 3600) % 24);
+			var day = Math.floor((lag / 3600) / 24);
+			$('#countDown').text('倒计时：'+day+' 天 '+hour+' 小时 '+minite+' 分 ');
+			
+		}else{
+			/*var url="http://"+window.location.host+"/index.php/Events/eventsRelease?date="+getDate();*/
+
+			var url="http://"+window.location.host+"/index.php/Events/eventsRelease?date=New";
+			$('#countDown').attr('href',url);
+			$('#countDown').text('战场实况');
+		}
+
+		setTimeout("updateEndTime()",10000);
+	}
+
+	function getDate(){
+		var date = new Date();
+		var year = date.getFullYear();
+		var month = date.getMonth() + 1;
+		var day = date.getDate();
+
+		return year+'-'+month+'-'+day;
+	}
+
+</script>

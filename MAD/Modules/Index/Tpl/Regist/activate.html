@@ -1,0 +1,86 @@
+<include file="Common:head"/>
+<link rel="stylesheet" href="__PUBLIC__/css/login.css"/>
+	<style type="text/css">
+		.content-box{
+			height:auto;
+			padding-bottom: 30px;
+		}
+		.content-bottom{
+			
+		}
+		.content-input input{
+		}
+		.content-input label{
+			text-align: left;
+		}
+
+	</style>
+
+<script type='text/javascript'>
+	var xml;
+	function checkUser(myValue,name){
+
+		var url="http://"+ window.location.host+"/index.php/Regist/check?"+name+"="+myValue;
+		spanname = name;
+		xml=new XMLHttpRequest();
+		xml.onreadystatechange=state_Change;
+		xml.open('post',url,true);
+		xml.send();
+	}
+	function state_Change()
+	{
+		if (xml.readyState==4)
+		{
+			if (xml.status==200)
+			{
+				$('#'+spanname).next('label').text(xml.responseText);
+				//document.getElementById(spanname).innerHTML=xml.responseText;
+			}
+			else
+			{
+				alert("Problem retrieving data:" + xml.statusText);
+			}
+		}
+	}
+</script>
+
+		<div class="content">
+			<div class="content-box">
+
+           		<form method="post" action="__URL__/activateUpdate">
+           		<input type="hidden" value="{$code}" name="code">
+           		<input type="hidden" value="{$userId}" name="userId">
+				<div class="content-bottom">
+					<div class="content-input">
+						<h3>请输入你的账号</h3>
+						<input type="text" id="username" name="username" onkeyup="checkUser(this.value,this.name)">
+						<label for="username" ></label>
+					</div>
+					
+					<div class="content-input">
+						<h3>请输入你的昵称</h3>
+						<input type="text" id="nicheng" name="nicheng" onkeyup="checkUser(this.value,this.name)">
+						<label for="nicheng" ></label>
+					</div>
+					
+					<div class="content-input">
+						<h3>密码</h3>
+						<input type="password" id="password" name="password" onkeyup="checkUser(this.value,this.name)">
+						<label for="password"></label>
+					</div>
+					
+					<div class="content-input">
+						<h3>确认密码</h3>
+						<input type="password" id="rpassword" name="rpassword" onkeyup="checkUser(this.value,this.name)">
+						<label for="rpassword"></label>
+					</div>
+
+					<div class="content-submit">
+						<input class="input-submit" type="submit" value="提交" name="" id="">
+					</div>
+				</div>
+				</form>
+			</div>
+		</div>
+		
+<include file="Common:foot"/>

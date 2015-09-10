@@ -1,0 +1,59 @@
+
+<script src="__PUBLIC__/js/lib/jquery-2.1.1.min.js"></script>
+<link href="__PUBLIC__/css/main.min.css" rel="stylesheet">
+		<link href="__PUBLIC__/css/video_pl.css" rel="stylesheet">	
+	<div id="pinglun" >
+		<div  class="reply_box" style="margin-bottom:20px;">
+	<if condition="$userInfo['img'] neq null">
+		<img src="__PUBLIC__/user_head/{$userInfo.img}" class="face" />
+	<else />
+		<div class="face">尚未登录</div>
+	</if>
+		<script src="__PUBLIC__/js/ajax_userMsg.js"></script>  
+		<input type="hidden" value="{$videoId}" name="video_id">
+		<input type="hidden" value="" name="hf_lou" id="hf_lou">
+		<textarea class="word_box" id="content" name="content"></textarea>
+		<br><input class="fabiao" type="submit" id="fb" name="fb" value="发表">
+	</div>
+
+
+<div id="top_fb" style=" position: absolute; top:-250px;"></div>
+<if condition="$video_comments neq null">
+	<volist name="video_comments" id="pl">
+		<div class="reply_box2">
+		<a href="__APP__/MyZone?userid={$pl.user_id}" target="_banlk">
+		<img src="__PUBLIC__/user_head/{$pl.user_img}" class="face2" />
+		</a>
+	    <div class="word_box2" id="{$pl.num}">
+	    	 <p id="{$pl.id}" class="reply">{$pl.content}</p>
+	         <p  class="time">By:{$pl.user_name}　{$pl.time}　{$pl.num}楼</p>
+	         
+	         <if condition="$pl['purview'] eq 1">
+	         	 <script src="__PUBLIC__/js/ajax_pingbi.js"></script>
+	       		 <a href="javascript:void(0)" id="del_pl" class="re" onclick="del_pl({$pl.id},{$pl.video_id})">删除</a>
+	        <else />
+	        </if>
+			<script>
+			function reply(id,lou,nick){
+				var url ="http://"+ window.location.host;
+				//var huifu='<a style="color:blue;" href="'+url+'//index.php/VideoDetail/see_pl_all?video_id='+id+'#'+lou+'">转到→</a>';
+				var louceng="回复@"+nick+":";
+				$(window.parent.document).find("#content").val(louceng);
+				//$(window.parent.document).find("#hf_lou").val(huifu);
+			}
+			</script>
+
+	        <a href="#top_fb" class="re" onclick="reply({$pl.video_id},{$pl.num},'{$pl.nick_name}');">
+	        	回复</a>
+	    </div>
+		</div>
+	</volist>
+    <link href="__PUBLIC__/css/page.css" rel="stylesheet">	 
+  <div class="manu">	
+	 {$page}
+ </div>
+ <else />
+ 	<h4 style="width:250px; margin:0 auto;">还没有评论呢。赶快来抢沙发吧~</h4>
+ </if>
+
+</div>

@@ -1,0 +1,95 @@
+<include file="Common:head"/>
+<style type="text/css">
+  #user-intro{
+      resize: none;
+  }
+</style>
+  <!-- content start -->
+  <div class="admin-content">
+
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">管理员增加</strong> / <small>addAdmin</small></div>
+    </div>
+
+<div class="am-tabs am-margin" data-am-tabs>
+   
+        <form class="am-form" method="POST" action="__URL__/saveAdmin">
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-2 am-text-right">
+              AdminId
+            </div>
+            <div class="am-u-sm-4">
+              <input type="text" disabled="disabled" class="am-input-sm" name="id" value="AI{$adminId}">
+            </div>
+            <div class="am-u-sm-6"></div>
+          </div>
+
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-2 am-text-right">
+              昵称
+            </div>
+            <div class="am-u-sm-4">
+              <input type="text"class="am-input-sm" name="nick" value="">
+            </div>
+            <div class="am-u-sm-6"></div>
+          </div>
+
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-2 am-text-right">
+              帐号
+            </div>
+            <div class="am-u-sm-4">
+              <input type="text"class="am-input-sm" name="username" value="">
+            </div>
+            <div class="am-u-sm-6"></div>
+          </div>
+
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-2 am-text-right">
+              密码
+            </div>
+            <div class="am-u-sm-4">
+              <input type="text"class="am-input-sm" name="password" value="">
+            </div>
+            <div class="am-u-sm-6"></div>
+          </div>
+
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-2 am-text-right">
+              确认密码
+            </div>
+            <div class="am-u-sm-4">
+              <input type="text"class="am-input-sm" name="rpassword" value="">
+            </div>
+            <div class="am-u-sm-6"></div>
+          </div>
+
+          <div class="am-g am-margin-top">
+            <div id="roleName" class="am-u-sm-2 am-text-right">
+              帐号类型
+            </div>
+            <div class="am-u-sm-4">
+            <select name="user_admin_type">
+              <foreach name="selectType" item="select">
+                <option value="{$select.id}">{$select.name}</option>
+              </foreach>
+            </select>
+            </div>
+            <div class="am-u-sm-6"></div>
+          </div>
+          
+          <input type="hidden" value="{$adminId2}" name="id">
+            <div class="am-margin">
+              <input type="submit" name="" value="提交保存" class="am-btn am-btn-primary am-btn-sm am-fl">
+            </div>
+    
+          </div>
+        </form>
+  </div>
+
+  <!-- content end -->
+<include file="Common:foot"/>
+<script type="text/javascript">
+
+
+</script>

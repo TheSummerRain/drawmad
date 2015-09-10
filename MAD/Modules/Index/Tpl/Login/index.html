@@ -1,0 +1,88 @@
+﻿<include file="Common:head"/>
+<link rel="stylesheet" href="__PUBLIC__/css/login.css"/>
+<style type="text/css">
+		.content-left{
+			width:300px;
+			float:left;
+			background: #fff;
+			border:none;
+		}
+		.content-right{
+			height:49px;
+			width:299px;
+			background: #eee;
+			float:right;
+			border-left: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;
+		}
+		.content-input2{
+			margin-top: 10px;
+		}
+</style>
+		
+		<div class="content">
+			<div class="content-box">
+				<div class="content-top">
+					<a href="__APP__/Login" class="content-left">登录</a>
+					<a href="__APP__/Regist" class="content-right">注册</a>
+				</div>
+
+<script type='text/javascript'>
+	var xml;
+	function checkUser(myValue,name){
+
+		var url="http://"+ window.location.host+"/index.php/Login/check?"+name+"="+myValue;
+		spanname = name;
+		xml=new XMLHttpRequest();
+		xml.onreadystatechange=state_Change;
+		xml.open('post',url,true);
+		xml.send();
+	}
+	function state_Change()
+	{
+		if (xml.readyState==4)
+		{
+			if (xml.status==200)
+			{
+				$('#'+spanname).next('label').text(xml.responseText);
+			}
+			else
+			{
+				alert("Problem retrieving data:" + xml.statusText);
+			}
+		}
+	}
+</script>
+
+         		<form action="__URL__/login" method="post">
+				<div class="content-bottom">
+					<div class="content-input">
+						<h3>账号/邮箱</h3>
+						<input type="text" id="email" name="email" >
+						<label for="email"></label>
+					</div>
+					
+					<div class="content-input">
+						<h3>密码</h3>
+						<input type="password" id="password" name="password" >
+						<label for="password"></label>
+					</div>
+					
+					<div class="content-input2">
+						<label for="ispassword" >
+							<input type="checkbox" name="ispassword" id="ispassword">
+							记住我
+						</label>
+					</div>
+		
+					<div class="content-submit">
+						<input class="input-submit" type="submit" value="登陆" name="" id="">
+						<a href="__APP__/BackPassword">找回密码</a>
+					</div>
+				</div>
+				</form>
+			</div>
+		</div>
+		
+
+<include file="Common:foot"/>

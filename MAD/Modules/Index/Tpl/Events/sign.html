@@ -1,0 +1,153 @@
+
+<include file="Events:eventsHead"/>
+
+<style type="text/css">
+	.content-submit{
+
+	}
+	.content-submit a{
+		width: 280px;
+		border: 2px solid #15b68e;
+		height: 75px;
+		color:#15b68e;
+		line-height: 75px;
+		text-align: center;
+		display: inline-block;
+		font-size: 32px;
+		font-weight: bold;
+		border-radius: 2px;
+		margin-bottom: 80px;
+		position:relative;
+	}
+	.content-submit div{
+		background: url(__PUBLIC__/images/xinrenBtn.png);
+		height:25px;
+		width: 21px;
+		display: inline-block;
+		margin-left: 30px;
+		/* position: absolute;
+		top:0;
+		right: 0; */
+	}
+	.content-sign{
+		border: 2px solid #15b68e;
+		padding:40px 35px;
+		text-align: left;
+	}
+		.content-sign-top{
+			height: 65px;
+			background: #15b68e;
+			text-align: left;
+			position: relative;
+			color:#fff;
+		}
+		.content-sign-top img{
+			position: absolute;
+			bottom:0;
+			left: 25px;
+		}
+		.content-sign-top span{
+			margin-left: 220px;
+			line-height: 65px;
+			font-size: 24px;
+		}
+		.user-head{
+			text-align: left;
+			color: #15b68e;
+			font-size: 24px;
+			display: inline-block;
+			margin-bottom: 30px;
+
+		}
+		.user-head img{
+			width:44px;
+			height: 44px;
+			border: 2px solid #e5e5e5;
+			border-radius: 22px;
+			vertical-align: middle;
+		}
+
+		.user-head span{
+			display: inline-block;
+			vertical-align: middle;
+			width: 200px;
+			overflow:hidden;
+			text-overflow:ellipsis; 
+		}
+		.xinrenX,.xinrenY{
+			margin-bottom: 130px;
+		}
+		
+		.content-signY-top{
+			background:#ff9c00; 
+		}
+		.content-signY{
+			border: 2px solid #ff9c00;
+		}
+		.content-signY .user-head{
+			color: #ff9c00;
+		}		
+</style>
+
+<div class="wrap content">
+	
+	<!-- <div class="content-submit">
+		<a href="__APP__/Events/eventsUpVideo">
+			<span>乖乖交稿</span>
+			<div></div>
+		</a>
+	</div> -->
+	
+	<div class="xinrenX">
+		<div class="content-sign-top content-signX-top">
+			<img src="__PUBLIC__/images/xinrenX.png" alt="">
+			<span>总报名人数 {$gameUserXNUM} 人  (报名已结束，灰色为尚未交稿者)</span>
+		</div>
+		<div class="content-sign content-signX">
+			
+			<div class="content-sign-people content-signX-people">
+				<foreach name="gameUserX" item="gamex">
+					<div class="user-head">
+						<a href="__APP__/MyZone?userid={$gamex.user_id}" target="_blank"><img src="__PUBLIC__/user_head/{$gamex.img}" alt=""></a>
+						
+						<if condition="$gamex.video_id eq null">
+						<span class="gray">{$gamex.nicheng}</span>
+						<else/>
+						<span>{$gamex.nicheng}</span>
+						</if>
+					</div>
+				</foreach>
+
+			</div>
+		</div>
+	</div>
+	
+
+	<div class="xinrenY">
+		<div class="content-sign-top content-signY-top">
+			<img src="__PUBLIC__/images/xinrenY.png" alt="">
+			<span>RL夏日祭联动参战</span>
+		</div>
+		<div class="content-sign content-signY">
+
+			<div class="content-sign-people content-signY-people">
+				<foreach name="gameUserY" item="gamey">
+					<div class="user-head">
+						<a href="__APP__/MyZone?userid={$gamey.user_id}" target="_blank"><img src="__PUBLIC__/user_head/{$gamey.img}" alt=""></a>
+
+						<if condition="$gamey.video_id eq null">
+						<span class="gray">{$gamey.nicheng}</span>
+						<else/>
+						<span>{$gamey.nicheng}</span>
+						</if>
+					</div>
+				</foreach>
+				
+				
+			</div>
+		</div>
+	</div>
+	
+</div>
+	
+<include file="Events:eventsFoot"/>

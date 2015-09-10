@@ -1,0 +1,140 @@
+<include file="Common:head"/>
+<link rel="stylesheet" href="__PUBLIC__/css/page.css">
+<link rel="stylesheet" href="__PUBLIC__/css/myZone.css">
+<style type="text/css">
+.input-msg {
+  background: #fff;
+  color: black;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  width: 80px;
+  height: 35px;
+}
+.input-fllow {
+  background: #97D954;
+  color: white;
+  cursor: pointer;
+  border: 0;
+  border-radius: 2px;
+  width: 80px;
+  height: 35px;
+  margin-left: 5px;
+}
+.content-top{
+  height: 260px;
+}
+.head-explan>div{
+  margin-top: 20px;
+}
+.content-bottom{
+  width: 980px;
+  margin-top: 50px;
+  padding:0 10px;
+}
+.main-video{
+  padding-bottom:100px;
+}
+</style>
+    
+    <div class="content">
+      <div class="content-top-wrap">
+        <div class="content-top">
+          <div class="content-left">
+            <div class="user-head">
+              <img src="__PUBLIC__/user_head/{$userInfo.img}" alt="">
+            </div>
+
+            <div class="head-explan">
+              <h3>{$userInfo.nicheng|mb_substr=0,20,'utf-8'}</h3>
+              <span id="userInfoSpan">{$userInfo.text}</span>
+              
+              <div>
+                <input type="submit" class="input-msg" value="私信">
+                <!--      是否显示关注        -->           
+                <if condition="($gz_friend eq 1)">   
+
+                  <input type="submit" name="addgzn" class="input-fllow" value="已关注">
+                  
+                <else/>
+                  <input  type="hidden"  name="user_friend_id" value="{$userInfo['id']}">
+
+                  <input type="submit" name="addgz" class="input-fllow" value="关注">
+                </if>
+              </div>
+
+            </div>
+            
+          </div>
+          
+          <div class="content-right">
+            <div class="user-uid">
+              <span>作品</span><label>{$userInfo.video_num}</label>
+              <p>UID:{$userInfo.id}</p>
+            </div>
+            <div class="user-friend">
+              <span>粉丝</span><label for="">{$userInfo.user_friend_count}</label>
+              <p>身份:{$userInfo.name_type}</p>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="content-bottom">
+        
+            <div class="main-left-video main-video">
+              <ul>
+                  <volist name="messageList" id="v" >
+                  <if condition="($key+1) % 4">
+                    <li class="video-detail video-common">
+                  <else/>
+                    <li class="video-detail video-common-other">
+                      
+                  </if>
+                      <a class="video-img" href="__APP__/VideoDetail?vid=MAD{$v.id}" target="_blank"><img src="__PUBLIC__/videos/{$v.fengmian}" alt="封面未找到" class="video_pic"></a>
+
+                      <a class="video-title" href="__APP__/VideoDetail?vid=MAD{$v.id}" target="_blank" class="video-distance" >
+                      <h4 class="">
+                        <if condition="$v.state eq 0">
+                        [未审核]
+                          <elseif condition="$v.state eq 2" />
+                        [已被封禁]
+                        </if>
+                        {$v.title|mb_substr=0,18,'utf-8'}
+                      </h4>
+                      </a>
+                      <p  class="video-distance video-distance-p">{$v.biaoqian}</p>
+                      <div class="video-distance">
+                        <div class="score">评分:{$v.score}</div>
+                        <div class="msg">
+                          <p>{$v.comments}&nbsp;评论&nbsp;/&nbsp;{$v.collect}&nbsp;收藏</p>
+                        </div>
+          
+                        
+                      </div>
+                    </li>
+                </volist>
+          
+              </ul>
+              
+            </div>
+          
+            <div class="manu" >     
+              <if condition="$messageList neq null">       
+                {$page}
+              <else />
+              </if>
+            </div>
+          </div>
+
+    </div>
+
+<include file="Common:foot"/>
+
+<script type="text/javascript" src="__PUBLIC__/js/ajax_MyZone_all.js"></script>
+<script type="text/javascript">
+
+
+</script>

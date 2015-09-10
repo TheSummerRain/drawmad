@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+
+
+    <title>RealMAD - 属于MADer自己的平台test</title>
+    <link href="__PUBLIC__/css/main.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header lite">
+      <div class="btm">
+        <div class="container"><a href="__APP__/"><img src="__PUBLIC__/img/logo.png" class="logo fl"></a>
+          <div class="search fr">
+            <form action="#">
+              <input type="text" placeholder="搜索功能即将开放" title="搜索功能即将开放">
+              <button action="submit"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="placehold50"></div>
+    </div>
+    <div class="content_lite">
+      <div class="tab_btn_login js_tab_login">
+        <ul class="tab_btn tab_btn_login clearfix">
+          <li class="active"><a href="__APP__/Login">登陆</a></li>
+          <li><a href="__APP__/Regist">注册</a></li>
+        </ul>
+        <ul class="tab_content mt40">
+          
+          <li data-tab="login" class="active">
+          <form action="__URL__/login" method="post">
+            <ul class="list_th_con up_form mt50">
+              <li>
+                <label class="th">账号：</label><span class="con">
+                <input type="text" name="username" placeholder="请输入您的账号或邮箱"  class="input_line">
+              </li>
+               <li>
+                <label class="th">密码：</label><span class="con">
+                  <input type="password" name="password" placeholder="请输入您的密码" class="input_line"></span>
+                  <input type="hidden" name="cs" value="{$cs|default=0}">
+              </li>
+           <if condition="$cs gt 2">   
+              <li>
+                <label class="th"><img src='__URL__/verify/' id="code" style="height:30px;  width:50px; margin:5px;"/></label><span class="con">                          
+				  <input type="text"  name="verify" placeholder="请输入验证码" class="input_line"></span>
+					<a href="#" onclick="document.getElementById('code').src='__URL__/verify/'">看不清楚，刷新</a>
+			  </li>
+            <else/>
+            </if>  
+            </ul>
+            <input type="submit" value="登陆" class="btn3 btn_green blc mt40" style="float:left; margin-left:60px;">
+             <div class="btn3 btn_green blc mt20" style="float:right; margin-right:60px; position:relative; top:26px; height:36px"><a href="__APP__/BackPassword">找回密码</a></div>
+            <p class="tac mt14" style="clear:both; padding-top:20px;">新账号必须成功投稿原创作品才能解锁评分和评论权限</p>
+          </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

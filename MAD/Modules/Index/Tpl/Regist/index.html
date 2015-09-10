@@ -1,0 +1,68 @@
+﻿<include file="Common:head"/>
+<link rel="stylesheet" href="__PUBLIC__/css/login.css"/>
+		
+		<div class="content">
+			<div class="content-box">
+				<div class="content-top">
+					<a href="__APP__/Login" class="content-left">登录</a>
+					<a href="__APP__/Regist" class="content-right">注册</a>
+				</div>
+
+<script type='text/javascript'>
+	var xml;
+	function checkUser(myValue,name){
+
+		var url="http://"+ window.location.host+"/index.php/Regist/check?"+name+"="+myValue;
+		spanname = name;
+		xml=new XMLHttpRequest();
+		xml.onreadystatechange=state_Change;
+		xml.open('post',url,true);
+		xml.send();
+	}
+	function state_Change()
+	{
+		if (xml.readyState==4)
+		{
+			if (xml.status==200)
+			{
+				$('#'+spanname).next('label').text(xml.responseText);
+				//document.getElementById(spanname).innerHTML=xml.responseText;
+			}
+			else
+			{
+				alert("Problem retrieving data:" + xml.statusText);
+			}
+		}
+	}
+</script>
+
+   				<form action="__URL__/regist" method="post">
+				<div class="content-bottom">
+					<div class="content-input">
+						<h3>邮箱</h3>
+						<input type="text" id="email" name="email" onkeyup="checkUser(this.value,this.name)">
+						<label for="email"></label>
+					</div>
+					
+					<!-- <div class="content-input">
+						<h3>密码</h3>
+						<input type="password" id="password" name="password" onkeyup="checkUser(this.value,this.name)">
+						<label for="password"></label>
+					</div>
+					
+					<div class="content-input">
+						<h3>确认密码</h3>
+						<input type="password" id="rpassword" name="rpassword" onkeyup="checkUser(this.value,this.name)">
+						<label for="rpassword"></label>
+					</div> -->
+
+					<div class="content-submit">
+						<input class="input-submit" type="submit" value="提交" name="" id="">
+					</div>
+				</div>
+				</form>
+			</div>
+		</div>
+		
+
+<include file="Common:foot"/>

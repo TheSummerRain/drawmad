@@ -1,0 +1,162 @@
+
+
+
+<include file="Common:head"/>
+
+<!-- <include file="Common:session_send"/> -->
+    <div class="container mt40">
+      <div class="l_side">
+        <h4><a  href="{:U('/Video/index/recommend/'.$videoInit["src"])}">仅显示首页推荐<div id="123" style="float:right;"> <img src="__PUBLIC__/img/{$videoInit.img}"/></a></div>
+        </h4>
+        
+
+
+   <script type="text/javascript">
+      $(document).ready(function(){
+          
+      })
+   </script>
+
+        <div class="tab_type js_tab_type mt30">
+             <ul class="tab_btn">
+                <li data-tab="all" class="active">全部</li>
+                <li data-tab="amv">AMV</li>
+                <li data-tab="mad">M@D</li>
+                <li data-tab="mv">MV</li>
+             </ul>
+
+             <form method='post' action="" >
+              <ul class="tab_content">
+              <li data-tab="all" class="active">
+                  <input type="checkbox" id="all00" class="type_checkbox hide">
+                  <label for="all00" class="check"><a href="{:U('/Video/index/score/4.8')}/">4.8分以上</a></label>
+                  <input type="checkbox" id="all00" class="type_checkbox hide">
+                  <label for="all00" class="check"><a href="{:U('/Video/index/score/4.5')}">4.5分以上</a></label>
+               	  <input type="checkbox" id="all00" class="type_checkbox hide">
+                  <label for="all00" class="check"><a href="{:U('/Video/index/score/4.0')}">4.0分以上</a></label>
+                  <input type="checkbox" id="all00" class="type_checkbox hide">
+                  <label for="all00" class="check"><a href="{:U('/Video/index/score/3.5')}">3.5分以上</a></label>
+               	  <input type="checkbox" id="all00" class="type_checkbox hide">
+                  <label for="all00" class="check"><a href="{:U('/Video/index/score/3.0')}">3.0分以上</a></label>
+                  <if condition="$content neq null">
+                   <input type="checkbox" id="all00" class="type_checkbox hide">
+                  <label for="all00" class="check"><a href="{:U('/Video/index/score/0')}">显示全部(基于搜索)
+                  </a></label>
+                   <else />
+                  </if>
+                  <input type="checkbox" id="all00" class="type_checkbox hide">
+                  <label for="all00" class="check"><a href="{:U('/Video')}">显示全部</a></label>
+                </li>
+         
+              <li data-tab="amv">
+              <input type="checkbox" id="amv00" value="动作 Action" name="biaoqian[]" class="type_checkbox hide">
+              <label for="amv00" class="check">动作 Action</label>
+              <input type="checkbox" id="amv01" value="人物 Character Profile" name="biaoqian[]" class="type_checkbox hide">
+              <label for="amv01" class="check">人物 Character Profile</label>
+              <input type="checkbox" id="amv02" value="喜剧 Comedy(Fun)" name="biaoqian[]" class="type_checkbox hide">
+              <label for="amv02" class="check">喜剧 Comedy(Fun)</label>
+              <input type="checkbox" id="amv03" value="舞曲 Dance" name="biaoqian[]" class="type_checkbox hide">
+              <label for="amv03" class="check">舞曲 Dance</label>
+              <input type="checkbox" id="amv04" value="惊悚 Horror" name="biaoqian[]" class="type_checkbox hide">
+              <label for="amv04" class="check">惊悚 Horror</label>
+              <input type="checkbox" id="amv05" value="迷幻 Psychedelic" name="biaoqian[]" class="type_checkbox hide">
+              <label for="amv05" class="check">迷幻 Psychedelic</label>
+              <input type="checkbox" id="amv06" value="浪漫 Romance" name="biaoqian[]" class="type_checkbox hide">
+              <label for="amv06" class="check">浪漫 Romance</label>
+              <input type="checkbox" id="amv07" value="情感 Sentimental" name="biaoqian[]" class="type_checkbox hide">
+              <label for="amv07" class="check">情感 Sentimental</label>
+              <input type="checkbox" id="amv08" value="故事 Story" name="biaoqian[]" class="type_checkbox hide">
+              <label for="amv08" class="check">故事 Story</label>
+              <input type="checkbox" id="amv09" value="预告 Trailer" name="biaoqian[]" class="type_checkbox hide">
+              <label for="amv09" class="check">预告 Trailer</label>
+              <input type="checkbox" id="amv010" value="合作 MEP" name="biaoqian[]" class="type_checkbox hide">
+              <label for="amv010" class="check">合作 MEP</label>
+              <input type="checkbox" id="amv011" value="片段 Exam section" name="biaoqian[]" class="type_checkbox hide">
+              <label for="amv011" class="check">片段 Exam section</label>
+            </li>
+            <li data-tab="mad">
+              <input type="checkbox" id="mad10" value="动画系" name="biaoqian2[]"  class="type_checkbox hide">
+              <label for="mad10" class="check">动画系</label>
+              <input type="checkbox" id="mad11" value="静止系" name="biaoqian2[]" class="type_checkbox hide">
+              <label for="mad11" class="check">静止系</label>
+              <input type="checkbox" id="mad12" value="混合系" name="biaoqian2[]" class="type_checkbox hide">
+              <label for="mad12" class="check">混合系</label>
+              <input type="checkbox" id="mad13" value="漫画" name="biaoqian2[]" class="type_checkbox hide">
+              <label for="mad13" class="check">漫画</label>
+              <input type="checkbox" id="mad14" value="小说" name="biaoqian2[]" class="type_checkbox hide">
+              <label for="mad14" class="check">小说</label>
+              <input type="checkbox" id="mad15" value="GalGame" name="biaoqian2[]" class="type_checkbox hide">
+              <label for="mad15" class="check">GalGame</label>
+              <input type="checkbox" id="mad16" value="燃系" name="biaoqian2[]" class="type_checkbox hide">
+              <label for="mad16" class="check">燃系</label>
+              <input type="checkbox" id="mad17" value="萌系" name="biaoqian2[]" class="type_checkbox hide">
+              <label for="mad17" class="check">萌系</label>
+              <input type="checkbox" id="mad18" value="唯美系" name="biaoqian2[]" class="type_checkbox hide">
+              <label for="mad18" class="check">唯美系</label>
+              <input type="checkbox" id="mad19" value="恐怖系" name="biaoqian2[]" class="type_checkbox hide">
+              <label for="mad19" class="check">恐怖系</label>
+              <input type="checkbox" id="mad110" value="片段" name="biaoqian2[]" class="type_checkbox hide">
+              <label for="mad110" class="check">片段</label>
+            </li>
+            <li data-tab="mv">
+              <input type="checkbox" id="mv20" value="科技风" name="biaoqian3[]" class="type_checkbox hide">
+              <label for="mv20" class="check">科技风</label>
+              <input type="checkbox" id="mv21" value="古风" name="biaoqian3[]" class="type_checkbox hide">
+              <label for="mv21" class="check">古风</label>
+              <input type="checkbox" id="mv22" value="形状层动画" name="biaoqian3[]" class="type_checkbox hide">
+              <label for="mv22" class="check">形状层动画</label>
+              <input type="checkbox" id="mv23" value="MG" name="biaoqian3[]" class="type_checkbox hide">
+              <label for="mv23" class="check">MG</label>
+              <input type="checkbox" id="mv24" value="3D" name="biaoqian3[]" class="type_checkbox hide">
+              <label for="mv24" class="check">3D</label>
+              <input type="checkbox" id="mv25" value="粒子" name="biaoqian3[]" class="type_checkbox hide">
+              <label for="mv25" class="check">粒子</label>
+              <input type="checkbox" id="mv26" value="一图流" name="biaoqian3[]" class="type_checkbox hide">
+              <label for="mv26" class="check">一图流</label>
+			   <input type="checkbox" id="mv27" value="三次元" name="biaoqian3[]" class="type_checkbox hide">
+              <label for="mv27" class="check">三次元</label>
+            </li>
+			<input type="submit" value="筛选" class="btn3 btn_green blc mt50" style="font-size:14px;">
+			<span style="margin-left:66px;color:#999;font-size:12px;">(最多三个)</span>
+          </ul>
+          </form>
+        </div>
+      </div>
+    <div class="r_side r-side_border">
+        <ul class="res_list">
+        	<volist id="v" name="videoList">
+          <li class="res_item">
+           <a href="{:U('/VideoDetail/index?vid=MAD'.$v['id'])}" target="_blank"><img src="__PUBLIC__/videos/{$v.fengmian}" alt="封面未找到"  class="video_pic_l fl"></a>
+                <a><h2 class="video_th video_th_mt0 mb20">{$v.fh}　{$v.title}</h2></a>
+                <p class="video_info">标签:&nbsp;<span>{$v.biaoqian}</span></p><a href="{:U('/My_zone?'.$lm.'&user_id='.$v['user_id'])}" class="video_info" target="_blank">作者:&nbsp;<span>{$v.zuozhe}</span></a><br>
+                
+                <p class="video_desc">
+                {$v.jieshao|default="这家伙很懒，什么也没留下"|mb_substr=0,50,'utf-8'}...
+                </p>
+                </p>
+                <dl class="video_score l_margin absoluteB">
+                  <dt>评论：</dt>
+                  <dd>{$v.comments}</dd>
+                  <dt>评分：</dt>
+                  <dd>{$v.score}</dd>
+                  <dt>收藏：</dt>
+                  <dd>{$v.collect}</dd>
+                </dl>
+          </li>
+         </volist>
+        </ul>
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/page.css" media="all" />
+       <div class="manu">
+       <if condition="$videoList neq null">       
+           {$page}
+        <else />
+       </if>
+      </div>
+    </div>
+    <div class="footer">
+      <p class="tac">本站由Drawmad工作室、BGM新人战、HARU祭联合创办</p>
+      <p class="tac">报错、提供建议、或请我们吃饭，请发邮件至 m182152608@163.com</p>
+    </div>
+   </div>
+  </body>
+</html>

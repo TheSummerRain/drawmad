@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+
+
+    <title>RealMAD - 属于MADer自己的平台test</title>
+    <link href="../Public/css/main.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header lite">
+      <div class="btm">
+        <div class="container"><a href="__APP__/"><img src="../Public/img/logo.png" class="logo fl"></a>
+          <div class="search fr">
+          </div>
+        </div>
+      </div>
+      <div class="placehold50"></div>
+    </div>
+    <div class="content_lite">
+      <div class="tab_btn_login js_tab_login">
+        <ul class="tab_btn tab_btn_login clearfix">
+          <li class="active"><a href="">找回密码</a></li>
+          
+        </ul>
+        <ul class="tab_content mt40">
+          <li data-tab="regist">
+            <ul class="list_th_con up_form mt50">
+              <li>
+                <label class="th">账号：</label><span class="con">
+                  <input placeholder="6位以上英文或数字" class="input_line"></span>
+              </li>
+              <li>
+                <label class="th">昵称：</label><span class="con">
+                  <input  placeholder="请填写你作为MADer的ID，填了就不能改了" class="input_line"></span>
+              </li>
+              <li>
+                <label class="th">密码：</label><span class="con">
+                  <input placeholder="6位以上英文或数字" class="input_line"></span>
+              </li>
+              <li class="w3">
+                <label class="th">再来遍：</label><span class="con">
+                  <input placeholder="麻烦你咯" class="input_line"></span>
+              </li>
+            </ul>
+            <div class="btn3 btn_green blc mt40">注册</div>
+            <p class="tac mt14">新账号必须成功投广告才能解锁评分和评论权限</p>
+          </li>
+          <li data-tab="login" class="active">
+           <FORM method="post" action="__URL__/update">
+            <ul class="list_th_con up_form mt50">
+               <li class="w3">
+                <label class="th">新密码：</label><span class="con">
+                  <input type="password" name="pwd" placeholder="请输入您的密码" class="input_line"></span>
+              	<input type="hidden" name ="user_id" value="{$user_id}">
+              </li>
+              
+            </ul>
+            <input type="submit" value="修改密码" class="btn3 btn_green blc mt40">
+            
+          </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+

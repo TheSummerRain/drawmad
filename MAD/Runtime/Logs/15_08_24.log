@@ -1,0 +1,96 @@
+[ 2015-08-24T11:52:15+08:00 ] 127.0.0.1 /index.php/MyZone/refreshNotice
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of MyZoneAction::uploadify() should be compatible with PublicAction::uploadify($expand = '') E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '4' and user_id = 5000
+ [ RunTime:0.001000s ]
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id = 5000 and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: tabVal E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 358 行.
+SQL: SHOW COLUMNS FROM `user_notice` [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: tabVal E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 362 行.
+SQL: UPDATE `user_notice` SET `state`=1,`read_date`='2015-08-24 11:52:15' WHERE ( type= ) [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : UPDATE `user_notice` SET `state`=1,`read_date`='2015-08-24 11:52:15' WHERE ( type= )
+
+[ 2015-08-24T11:52:20+08:00 ] 127.0.0.1 /index.php/MyZone/www
+ERR: 非法操作:www
+
+[ 2015-08-24T11:53:46+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/id_5000_num_4.flv
+ERR: 无法加载模块:MAD
+
+[ 2015-08-24T19:05:30+08:00 ] 127.0.0.1 /index.php/Admin/User/checkVideo?vid=MAD
+ERR: 非法操作:checkVideo
+
+[ 2015-08-24T19:31:01+08:00 ] 127.0.0.1 /index.php/MyZone/refreshNotice
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of MyZoneAction::uploadify() should be compatible with PublicAction::uploadify($expand = '') E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '4' and user_id = 5000
+ [ RunTime:0.001000s ]
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id = 5000 and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: tabVal E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 358 行.
+SQL: SHOW COLUMNS FROM `user_notice` [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: tabVal E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Index\Action\MyZoneAction.class.php 第 362 行.
+SQL: UPDATE `user_notice` SET `state`=1,`read_date`='2015-08-24 19:31:01' WHERE ( type= ) [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : UPDATE `user_notice` SET `state`=1,`read_date`='2015-08-24 19:31:01' WHERE ( type= )
+
+[ 2015-08-24T19:31:04+08:00 ] 127.0.0.1 /index.php/MyZone/www
+ERR: 非法操作:www
+
+[ 2015-08-24T19:32:07+08:00 ] 127.0.0.1 /index.php/UpVideo/uploadify?id=5000&num=5
+ERR: 非法操作:uploadify
+
+[ 2015-08-24T19:32:29+08:00 ] 127.0.0.1 /index.php/UpVideo/uploadify?id=5000&num=5
+ERR: 非法操作:uploadify
+
+[ 2015-08-24T19:32:42+08:00 ] 127.0.0.1 /index.php/UpVideo/UpVideo
+ERR: Action:up_video您所请求的方法不存在！
+
+[ 2015-08-24T19:33:18+08:00 ] 127.0.0.1 /index.php/UpVideo/UpVideo
+ERR: Action:up_video您所请求的方法不存在！
+

@@ -1,0 +1,131 @@
+[ 2015-09-09T08:56:06+08:00 ] 127.0.0.1 /Game/Login/login
+ERR: Access denied for user 'root'@'localhost' (using password: NO)
+
+[ 2015-09-09T08:56:55+08:00 ] 127.0.0.1 /Game/Login/login
+ERR: Access denied for user 'root'@'localhost' (using password: NO)
+
+[ 2015-09-09T08:56:58+08:00 ] 127.0.0.1 /Game/Login/login
+ERR: Access denied for user 'root'@'localhost' (using password: NO)
+
+[ 2015-09-09T09:06:07+08:00 ] 127.0.0.1 /Game/Video/checkVideo?vid=MAD
+ERR: 模板不存在[./MAD/Modules/Game/Tpl/Video/checkVideo.html]
+
+[ 2015-09-09T12:54:04+08:00 ] 127.0.0.1 /Game/Video/addRelease?id=
+ERR: 模板不存在[./MAD/Modules/Game/Tpl/Video/addRelease.html]
+
+[ 2015-09-09T18:08:07+08:00 ] 127.0.0.1 /index.php/Admin/XRZVideo/searchRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-09T18:12:00+08:00 ] 127.0.0.1 /index.php/Admin/XRZVideo/searchRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-09T18:12:38+08:00 ] 127.0.0.1 /index.php/Admin/XRZVideo/searchRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-09T18:12:50+08:00 ] 127.0.0.1 /Game/Release/searchRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+NOTIC: [8] Undefined variable: where E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\ReleaseAction.class.php 第 67 行.
+SQL: select b.id as game_mad_user_id, b.date_turn, c.nicheng, b.video_id, 
+b.user_id, ifnull(d.title, '无') as title,bb.name as group_name
+from game_mad_user b 
+LEFT JOIN game_mad_group bb on b.mad_group = bb.id
+LEFT JOIN user_mad c on b.user_id = c.id
+LEFT JOIN video d on b.video_id = d.id
+
+
+ORDER BY b.id
+limit 7 [ RunTime:0.001000s ]
+
+[ 2015-09-09T18:12:58+08:00 ] 127.0.0.1 /Game/Release/searchRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+NOTIC: [8] Undefined variable: where E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\ReleaseAction.class.php 第 67 行.
+SQL: select b.id as game_mad_user_id, b.date_turn, c.nicheng, b.video_id, 
+b.user_id, ifnull(d.title, '无') as title,bb.name as group_name
+from game_mad_user b 
+LEFT JOIN game_mad_group bb on b.mad_group = bb.id
+LEFT JOIN user_mad c on b.user_id = c.id
+LEFT JOIN video d on b.video_id = d.id
+
+
+ORDER BY b.id
+limit 7 [ RunTime:0.001000s ]
+
+[ 2015-09-09T18:13:25+08:00 ] 127.0.0.1 /index.php/Game/Release/saveRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_release_1` [ RunTime:0.003000s ]
+SQL: INSERT INTO `game_mad_release_1` (`title`,`date`,`date_create`) VALUES ('标题1111','2015-08-31','2015-09-09 18-13-25') [ RunTime:0.031002s ]
+SQL: SHOW COLUMNS FROM `game_mad_release_2` [ RunTime:0.005000s ]
+SQL: INSERT INTO `game_mad_release_2` (`head_id`,`date`,`game_mad_user_id`) VALUES (10,'2015-08-31',1),(10,'2015-08-31',2),(10,'2015-08-31',3),(10,'2015-08-31',4) [ RunTime:0.041002s ]
+
+[ 2015-09-09T18:15:41+08:00 ] 127.0.0.1 /Game/Release/searchRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+NOTIC: [8] Undefined variable: where E:\huasuhui\GRProject\drawmadTest\MAD\Modules\Game\Action\ReleaseAction.class.php 第 67 行.
+SQL: select b.id as game_mad_user_id, b.date_turn, c.nicheng, b.video_id, 
+b.user_id, ifnull(d.title, '无') as title,bb.name as group_name
+from game_mad_user b 
+LEFT JOIN game_mad_group bb on b.mad_group = bb.id
+LEFT JOIN user_mad c on b.user_id = c.id
+LEFT JOIN video d on b.video_id = d.id
+
+
+ORDER BY b.id
+limit 7 [ RunTime:0.001001s ]
+
+[ 2015-09-09T18:15:48+08:00 ] 127.0.0.1 /index.php/Game/Release/saveRelease
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select a.*, b.`name` as  user_admin_type_name
+from user_admin a 
+LEFT JOIN game_mad b on a.user_admin_type = b.id
+where a.id = '40'
+ORDER BY id   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nickname E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 146 行.
+SQL: SHOW COLUMNS FROM `game_mad_release_1` [ RunTime:0.003000s ]
+SQL: INSERT INTO `game_mad_release_1` (`title`,`date`,`game_mad_id`,`date_create`) VALUES ('ddd','2015-09-07',3,'2015-09-09 18-15-48') [ RunTime:0.067004s ]
+SQL: SHOW COLUMNS FROM `game_mad_release_2` [ RunTime:0.009001s ]
+SQL: INSERT INTO `game_mad_release_2` (`head_id`,`date`,`game_mad_user_id`) VALUES (11,'2015-09-07',0),(11,'2015-09-07',4),(11,'2015-09-07',5),(11,'2015-09-07',6) [ RunTime:0.055003s ]
+

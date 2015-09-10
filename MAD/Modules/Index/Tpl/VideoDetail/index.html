@@ -1,0 +1,342 @@
+﻿
+<include file="Common:head"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/page.css" media="all" />   
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/videoDetail.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/animate.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/jPages.css">
+<style type="text/css">
+	#myElement_logo{
+		opacity: 0;
+		width:0;
+		height:0;
+		display: none;
+	}
+
+</style>
+		
+		<div class="content-title">
+			<div class="content-title-wrap">
+				<div class="content-title-left">
+				<h3>
+					<if condition="$videoInfo.state eq 0">
+					[未审核]
+					<elseif condition="$videoInfo.state eq 2" />
+					[已被封禁]
+					</if>
+					{$videoInfo['title']}
+				</h3>
+				<span>{$videoInfo['biaoqian']}</span>
+				</div>
+				<div class="content-title-right">
+					<h3>{$userInfo['nicheng']}</h3>
+				</div>
+				<a href="__APP__/MyZone?&userid={$userInfo.id}" class="user-head">
+					<img src="__PUBLIC__/user_head/{$userInfo.img}" alt="">
+				</a>
+			</div>
+
+		</div>
+
+
+		<div class="content">
+			<div class="content-box">
+				<div class="content-left">
+					<ul>
+						<li>作者：{$videoInfo['zuozhe']}</li>
+						<li>音乐：{$videoInfo['BGM']|default="无"}</li>
+						<li>完稿：{$videoInfo['wg_time']}</li>
+						<li class="content-about">简介：{$videoInfo['jieshao']|default="这家伙很懒，什么也没留下"|mb_substr=0,150,'utf-8'}</li>
+					</ul>
+				</div>
+
+				<div class="content-right">
+					<ul>
+						<li>{$userInfo['text']}</li>
+						<li class="content-control">
+							<input type="submit" class="input-msg" value="私信">
+							<input  type="hidden"  name="user_friend_id" value="{$userInfo['id']}">
+							<!--      是否显示关注        -->           
+							<if condition="($is_friend eq 1) or ($is_friend eq 4)">  
+								<input type="submit" name="addgz" class="input-fllow" value="关注">
+
+								<elseif condition="$is_friend eq 3"/>
+								<input type="submit" name="addgzn" class="input-fllow" value="已关注">
+							<else/>
+
+								<input type="submit" name="addgzn" class="input-fllow" value="已关注">
+							</if>
+
+
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+
+			<div class="content-video">
+				<div class="video">
+					<!-- <script src="__PUBLIC__/jwplayer/jwplayer.js" type="text/javascript"></script>
+					<div id="myElement">Loading the player ...</div> -->
+					<!-- <script type="text/javascript">
+
+					jwplayer("myElement").setup({
+					  flashplayer: '__PUBLIC__/jwplayer/jwplayer.flash.swf',  
+					  file: "__PUBLIC__/videos/{$videoInfo['video_path']}",
+					  image: "__PUBLIC__/videos/{$videoInfo['fengmian']}",
+					  height: 470,
+					  width: 848,
+					  dock: false
+					});
+
+					</script>-->
+					
+
+					<script type="text/javascript" src="__PUBLIC__/sewise-player/player/sewise.player.min.js"></script>
+					<!-- <script type="text/javascript">
+						SewisePlayer.setup({
+							server: "vod",
+				            autostart:'false',
+							type: "flv",
+							videourl: "http://test.drawmad2.com/MAD/Modules/Index/Tpl/Public/videos/id_5000_num_5.flv",
+							//videourl: "http://jackzhang1204.github.io/materials/mov_bbb.mp4",
+							//poster: "http://jackzhang1204.github.io/materials/poster.png",
+					        skin: "vodWhite",
+					        title: "Tile 标题",
+					        lang: 'zh_CN'
+						});
+					</script>-->
+
+				   	<script type="text/javascript">
+				        SewisePlayer.setup({
+				            claritybutton:'disable',
+				            topbardisplay:'disable',
+				            autostart:'false',
+				            draggable:'true',
+				            server: "vod",
+				            type:"{$videoInfo['video_suffix']}",
+				            videourl: "http://{$_SERVER['SERVER_NAME']}/__PUBLIC__/videos/{$videoInfo['video_path']}",
+				            skin: "vodWhite",
+				            title: "{$videoInfo['title']}",
+				            lang: 'zh_CN',
+				            logo:'www',
+				            //poster:"http://{$videoInfo['server_name']}/__PUBLIC__/videos/{$videoInfo['fengmian']}"
+				          	
+				        });
+				    </script>
+
+				</div>
+
+				<!--锚点-->
+				<a id="pos" ></a>
+				<div class="video-msg">
+					<div class="video-msg-left">
+						<h3 id="avg_score_fen">{$videoInfo['score']}</h3>
+
+						<if condition="$_SESSION['id'] eq null">
+							
+							<span>只有正式会员可以给作品打分 请先 <a href="__APP__/Login" target="_blank">登录</a> 并 <label for="">投稿</label> 成为正式会员</span>
+							
+						<else/>
+							<div class="video-msg-score">
+							<select name="point">
+								<option value="10">10</option>
+								<option value="9">9</option>
+								<option value="8">8</option>
+								<option value="7">7</option>
+								<option value="6">6</option>
+								<option value="5">5</option>
+								<option value="4">4</option>
+								<option value="3">3</option>
+								<option value="2">2</option>
+								<option value="1">1</option>
+								<option value="0">0</option>
+							</select>
+							<input type="submit" value="打分" id="add_video_score">
+							</div>
+						</if>
+						
+						
+					</div>
+					<div class="video-msg-right">
+						<div class="video-down">
+							
+						
+							<if condition="$videoInfo['down_purview'] eq 0">
+
+								<!-- <if condition="$videoInfo['xiazai'] eq null">
+									<a href="#" id="down-high"><img src="__PUBLIC__/images/down.png" alt=""><span>高清版</span>
+									</a>
+									<div class="down-high-url">
+										<span>这个视频还没有原档呢</span>
+									</div>
+								<else/>
+									<a href="{$videoInfo['xiazai']}"  target='_bank' id="down-high"><img src="__PUBLIC__/images/down.png" alt=""><span>高清版</span>
+									</a>
+									<div class="down-high-url">
+								
+                 						 <a >下载原档</a>
+                  						 <span >密码:&nbsp;<span>{$videoInfo['xiazaipass']|default="无"}</span></span>
+									</div>
+								</if> -->
+
+								<if condition="$_SESSION['id'] eq null">
+								<a href="#" id="down-high"><img src="__PUBLIC__/images/down.png" alt=""><span>高清版</span>
+								</a>
+								<div class="down-high-url">
+									<span>高清原档仅会员可下载</span>
+								</div>
+								<else/>
+									 <switch name="$videoInfo['xiazai']">
+								        <case value="null">
+								        	<a href="#" id="down-high"><img src="__PUBLIC__/images/down.png" alt=""><span>高清版</span>
+											</a>
+											<div class="down-high-url">
+												<span>这个视频还没有原档呢</span>
+											</div>
+								        </case>
+								        <default />
+								        	<a href="{$videoInfo['xiazai']}" target='_bank' id="down-high"><img src="__PUBLIC__/images/down.png" alt=""><span>高清版</span>
+											</a>
+								        	<div class="down-high-url">
+		                 						 <a >下载原档</a>
+		                  						 <span >密码:&nbsp;<span>{$videoInfo['xiazaipass']|default="无"}</span></span>
+											</div>
+								    </switch>
+								</if>
+							<else/>
+								<if condition="($_SESSION['user_type'] eq null) or ($_SESSION['user_type'] eq 1)">
+								<a href="#" id="down-high"><img src="__PUBLIC__/images/down.png" alt=""><span>高清版</span>
+								</a>
+								<div class="down-high-url">
+									<span>高清原档仅正式会员可下载</span>
+								</div>
+								<else/>
+									 <switch name="$videoInfo['xiazai']">
+								        <case value="null">
+								        	<a href="#" id="down-high"><img src="__PUBLIC__/images/down.png" alt=""><span>高清版</span>
+											</a>
+											<div class="down-high-url">
+												<span>这个视频还没有原档呢</span>
+											</div>
+								        </case>
+								        <default />
+								        	<a href="{$videoInfo['xiazai']}" target='_bank' id="down-high"><img src="__PUBLIC__/images/down.png" alt=""><span>高清版</span>
+											</a>
+								        	<div class="down-high-url">
+		                 						 <a >下载原档</a>
+		                  						 <span >密码:&nbsp;<span>{$videoInfo['xiazaipass']|default="无"}</span></span>
+											</div>
+								    </switch>
+								</if>
+
+
+
+							</if>
+
+							
+							
+							<a href="__PUBLIC__/videos/{$videoInfo['video_path']}"><img src="__PUBLIC__/images/down.png" alt=""><span>网络版</span></a>
+						</div>
+
+						<div class="video-other">
+							
+         					<input type="hidden" name ="video_id" value="{$videoInfo['id']}">
+			      			<input for="save_video_check" class="" id="add_sc" type='submit' value='' >
+
+							<!-- <a href="#"><img src="__PUBLIC__/images/collect2.png" alt=""></a> -->
+							<a href="
+
+							http://service.weibo.com/share/share.php?url=http://{$_SERVER['SERVER_NAME']}__APP__/VideoDetail?vid=MAD{$videoInfo.id}&amp;title=这视频简直太赞了！忍不住分享了~{$videoInfo.title}（@drawmad）&amp;
+							pic=http://{$_SERVER['SERVER_NAME']}__PUBLIC__/videos/{$videoInfo['fengmian']}
+
+							" target="_blank"><img src="__PUBLIC__/images/weibo.png" alt=""></a>
+							
+							<!-- <a href="http://service.weibo.com/share/share.php?appkey=&title=&url=&pic=&searchPic=false&style=simple" target="_blank"> -->
+
+						</div>
+					</div>
+				</div>
+
+				<div class="video-comment"> 
+					<div class="video-comment-input">
+						<textarea placeholder="看完片留下回复并评论的都是好孩子" id="comment-textarea"></textarea>
+						
+						<input type="submit" name="comment-input" id="comment-input" value="发表">
+						<input type="hidden" name="return-input" id="return-input" value="">
+					</div>
+
+	
+					<div class="video-comment-list" id="itemContainer">						
+						<foreach name="video_comments" item="v">
+							<div class="comment">
+								<div class="comment-left">
+									<a href="__APP__/MyZone?userid={$v.user_id}" target="_blank"><img src="__PUBLIC__/user_head/{$v.user_img}" alt=""></a>
+								</div>
+								<div class="comment-right">
+									<ul>
+										<li class="comment-title">
+											<div>
+												<span class="comment-title-num">#{$v.num}</span><span class="comment-title-name">{$v.nick_name}</span>
+											</div>
+											
+										</li>
+										<li class="comment-content">
+											<if condition="$v.parent_num eq null">
+												{$v.content}
+												<else/>
+												<a>#回复{$v.parent_num}L# </a>{$v.parent_nick_name} {$v.content}
+											</if>
+										</li>
+										<li class="comment-date">
+											<div>{$v.time}</div>
+										</li>
+									</ul>
+										
+									<div class="comment-control">
+
+										<if condition="$v.purview eq 1">
+											<a href="javascript:void(0)" data-id='{$v.id}' data-videoId='{$v.video_id}' class="comment-control-del" >删除</a>
+										</if>
+											<a href="#pos" data-id="{$v.id}" data-num="{$v.num}" data-name="{$v.nick_name}" class="comment-control-return">回复</a>
+										
+									</div>
+								</div>
+							</div>
+						</foreach>
+					</div>
+						
+						<input type="hidden" value="{$listRows}" id="listRows">
+						<div class="holder">	
+							<!-- {$page} -->
+						</div>
+				</div>
+			</div>
+		</div>
+<input type="hidden" value="__PUBLIC__" id="resUrl"></input>
+<include file="Common:foot"/>
+<script src="__PUBLIC__/js/ajax_score.js"></script>
+<script src="__PUBLIC__/js/ajax_collect.js"></script>
+<script src="__PUBLIC__/js/ajax_gz.js"></script>
+<script src="__PUBLIC__/js/ajax_comment.js"></script>
+<script src="__PUBLIC__/js/jPages.js"></script>
+
+
+<script>
+$(function(){
+
+	$("div.holder").jPages({
+		  containerID  : "itemContainer",
+		  perPage      : 4,
+		  startPage    : 1,
+		  startRange   : 1,
+		  midRange     : 5,
+		  endRange     : 1
+		});
+});
+</script>
+
+
+<div style="display:none">
+<script language="javascript" type="text/javascript" src="http://js.users.51.la/18221289.js"></script>
+<noscript><a href="http://www.51.la/?18221289" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/18221289.asp" style="border:none" /></a></noscript>
+</div>

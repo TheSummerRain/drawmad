@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+  <head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+    <title>RealMAD - 属于MADer自己的平台test</title>
+    <link href="../Public/css/main.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header lite">
+      <div class="btm">
+        <div class="container"><a href="__APP__/"><img src="../Public/img/logo.png" class="logo fl"></a>
+          <div class="search fr">
+            <form action="#">
+              <input type="text" placeholder="搜索功能即将开放" title="搜索功能即将开放">
+              <button action="submit"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="placehold50"></div>
+    </div>
+    <div class="content_lite">
+      <div class="tab_btn_login js_tab_login">
+        <ul class="tab_btn tab_btn_login clearfix">
+          <li data-tab="login"><a href="__APP__/Regist">登陆</a></li>
+          <li data-tab="regist" class="active"><a href="__APP__/Log">注册</a></li>
+        </ul>
+   <form action="__URL__/ins" method="post">
+   
+
+<script type='text/javascript'>
+var xml;
+	function checkUser(myValue,name){
+		
+		var url="http://"+ window.location.host+"/index.php/Log/"+name+"?"+name+"="+myValue;
+
+		spanname = name;
+		xml=new XMLHttpRequest();
+		xml.onreadystatechange=state_Change;
+		xml.open('post',url,true);
+		xml.send();
+	}
+	function state_Change()
+	{
+	if (xml.readyState==4)
+	  {
+	  if (xml.status==200)
+	    {
+	    document.getElementById(spanname).innerHTML=xml.responseText;
+	    }
+	  else
+	    {
+	    alert("Problem retrieving data:" + xml.statusText);
+	    }
+	  }
+	}
+</script>
+
+   
+   
+
+   
+        <ul class="tab_content mt40">
+          <li data-tab="regist" class="active">
+            <ul class="list_th_con up_form mt50">
+            <li>
+                <label class="th">账号：</label><span class="con">
+                <textarea type="text" name="user" placeholder="6位以上英文或数字"  class="input_line"
+                  onkeyup="checkUser(this.value,this.name)" onkeyup="this.value=this.value.replace(/[^\w\.\/]/ig,'');"></textarea>
+              </li>
+            	<span id='user'></span> 
+            	<li>
+                <label class="th">昵称：</label><span class="con">
+                  <input type="text" onkeyup="checkUser(this.value,this.name)" name="nicheng" placeholder="请填写你的惯用笔名，此项不能修改" class="input_line"></span>
+             		<span id='nicheng'></span>
+              </li>
+              <li>
+                <label class="th">邮箱：</label><span class="con">
+                  <input type="text" onkeyup="checkUser(this.value,this.name)" name="email" placeholder="用于找回密码，可用作登录" class="input_line"></span>
+              		<span id='email'></span>
+              </li>
+              <li>
+                <label class="th">密码：</label><span class="con">
+                  <input type="password" onkeyup="checkUser(this.value,this.name)" name="pwd" placeholder="6位以上英文或数字" class="input_line"></span>
+             		<span id='pwd'></span>
+              </li>
+              <li class="w3">
+                <label class="th">再来遍：</label><span class="con">
+                  <input type="password" onkeyup="checkUser(this.value,this.name)" name="rpwd" placeholder="请再输入一遍密码" class="input_line"></span>
+              		<span id='rpwd'></span>
+              </li>
+            </ul>
+            
+            <input type="submit" id = "addlog" value="注册" class="btn3 btn_green blc mt40">
+         </form>
+            <p class="tac mt14">新账号必须成功发布原创作品才能解锁评分和评论权限</p>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

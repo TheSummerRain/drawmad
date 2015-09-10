@@ -1,0 +1,140 @@
+<include file="Common:head"/>
+
+  <!-- content start -->
+  <div class="admin-content">
+
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">权限管理</strong> / <small>Purview</small></div>
+    </div>
+
+<div class="am-tabs am-margin" data-am-tabs>
+    <ul class="am-tabs-nav am-nav am-nav-tabs">
+      <li id="tabli1" class="am-active"><a href="#tab1">基本信息</a></li>
+      <li id="tabli2" ><a href="#tab2">权限配置</a></li>
+    </ul>
+
+    <div class="am-tabs-bd">
+      <div class="am-tab-panel am-fade am-in am-active" id="tab1">
+        <div class="am-g am-margin-top">
+        <div class="am-u-sm-12">
+          <table class="am-table am-table-striped am-table-hover table-main">
+              <thead>
+                <tr>
+                  <th class="table-id">ID</th><th class="table-title">权限组名称</th><th class="table-author">创建时间</th>
+                </tr>
+               </thead>
+              <tbody>
+
+              <foreach name="roleGroupList" item="user">
+               <tr>
+                <td>PID{$user.id}</td>
+                <td><a href="#">{$user.name}</a></td>
+                <td>{$user.create_time|date='Y年m月d日 H:i:s', ###}</td>
+                <td>
+                <input type="hidden" name="roidGroupIdsV" value="{$user.role_id}" >
+                  <div class="am-btn-toolbar">
+                    <div class="am-btn-group am-btn-group-xs">
+                      <a href="#" name="current_purview_a" class="am-btn am-btn-default am-btn-xs am-text-danger"><span class="am-icon-trash-o"></span>权限</a>
+                    </div>
+                  </div>
+                </td>
+              </tr> 
+              </foreach>
+              
+              </tbody>
+          </table>
+          <div class="am-cf">
+            <div class="am-fr">
+            {$page}
+            </div>
+          </div>
+          <hr />
+          <p></p>
+        <!-- </form> -->
+      </div>
+    </div>
+  </div>
+
+<div class="am-tab-panel am-fade" id="tab2">
+        <form class="am-form" method="POST" action="__URL__/update">
+          <div class="am-g am-margin-top">
+            <div id="roleName" class="am-u-sm-2 am-text-right">
+              Id
+            </div>
+            <div class="am-u-sm-4">
+              <input id="roleGroupIdV" type="text" disabled="disabled" class="am-input-sm" value="">
+            </div>
+            <div class="am-u-sm-6"></div>
+          </div>
+
+
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-2 am-text-right">
+              权限组
+            </div>
+            <div class="am-u-sm-4">
+              <input id="roleNameV" type="text" disabled="disabled" class="am-input-sm">
+            </div>
+            <div class="am-u-sm-6"></div>
+          </div>
+
+          <div class="am-g am-margin-top-sm">
+            <div class="am-u-sm-2 am-text-right">
+              权限编辑
+            </div>
+            <!-- <div class="am-u-sm-10">
+              <textarea rows="10" placeholder="请使用富文本编辑插件"></textarea>
+            </div> -->
+
+            <input type="hidden" name="roleGroupId" value="" id="roleGroupId">
+            <div class="am-u-sm-4 current_purview_id" style="display:inline-block">
+              <foreach name="roleList" item="role">
+                <div style="display:inline-block">
+                  <input type="checkbox" id="PPID{$role.id}" value="{$role.id}" name="role[]" class="type_checkbox" >
+                  <label class="check" style=" font-weight:normal">{$role.role}</label>
+                </div>
+              </foreach>
+            </div>
+
+            <div class="am-u-sm-6"></div>
+            </div>
+             <div class="am-margin">
+              <input type="submit" name="" value="提交保存" class="am-btn am-btn-primary am-btn-sm am-fl">
+            </div>
+    
+          </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+  <!-- content end -->
+<include file="Common:foot"/>
+<script type="text/javascript">
+
+  $("[name='current_purview_a']").bind('click', function(){
+     
+      //$(".current_purview_id input").removeAttr("checked"); attr prop
+      $(".current_purview_id input[type=checkbox]").each(function(){
+        $(this).prop('checked', false);
+      })
+
+      var val = $(this).parent().parent().parent().parent();
+      var valR= val.find("td:eq(3)").children('input[name="roidGroupIdsV"]').val();
+      var roidGroupIdsV = valR.split(',');
+      for(var i=0; i< roidGroupIdsV.length; i++){
+          $('#PPID'+roidGroupIdsV[i]).prop('checked', true);
+      }
+
+      $('#roleGroupIdV').val(val.find("td:eq(0)").text());
+      $('#roleGroupId').val(val.find("td:eq(0)").text());
+      $('#roleNameV').val(val.find("td:eq(1)").text());
+      $('#roleId').val(val.find("td:eq(0)").text());
+      $('#tab1').removeClass('am-in am-active');
+      $('#tab2').addClass('am-in am-active');
+      $('#tabli1').removeClass('am-active');
+      $('#tabli2').addClass('am-active');
+
+  })
+
+</script>

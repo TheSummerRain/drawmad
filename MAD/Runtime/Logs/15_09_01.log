@@ -1,0 +1,106 @@
+[ 2015-09-01T09:48:24+08:00 ] 127.0.0.1 /MAD/Modules/Index/Tpl/Public/uploadgify/uploadify.swf?preventswfcaching=1441072104458
+ERR: 无法加载模块:MAD
+
+[ 2015-09-01T09:48:24+08:00 ] 127.0.0.1 /MAD/Modules/Index/Tpl/Public/uploadgify/uploadify.swf?preventswfcaching=1441072104458
+ERR: 无法加载模块:MAD
+
+[ 2015-09-01T09:48:24+08:00 ] 127.0.0.1 /MAD/Modules/Index/Tpl/Public/uploadgify/uploadify.swf?preventswfcaching=1441072104458
+ERR: 无法加载模块:MAD
+
+[ 2015-09-01T09:49:08+08:00 ] 127.0.0.1 /MAD/Modules/Index/Tpl/Public/uplogadify/uploadify.swf?preventswfcaching=1441072148265
+ERR: 无法加载模块:MAD
+
+[ 2015-09-01T09:49:08+08:00 ] 127.0.0.1 /MAD/Modules/Index/Tpl/Public/uplogadify/uploadify.swf?preventswfcaching=1441072148265
+ERR: 无法加载模块:MAD
+
+[ 2015-09-01T09:49:08+08:00 ] 127.0.0.1 /MAD/Modules/Index/Tpl/Public/uplogadify/uploadify.swf?preventswfcaching=1441072148265
+ERR: 无法加载模块:MAD
+
+[ 2015-09-01T09:49:09+08:00 ] 127.0.0.1 /MAD/Modules/Index/Tpl/Public/uplogadify/uploadify.swf?preventswfcaching=1441072149155
+ERR: 无法加载模块:MAD
+
+[ 2015-09-01T09:49:09+08:00 ] 127.0.0.1 /MAD/Modules/Index/Tpl/Public/uplogadify/uploadify.swf?preventswfcaching=1441072149155
+ERR: 无法加载模块:MAD
+
+[ 2015-09-01T09:49:09+08:00 ] 127.0.0.1 /MAD/Modules/Index/Tpl/Public/uplogadify/uploadify.swf?preventswfcaching=1441072149155
+ERR: 无法加载模块:MAD
+
+[ 2015-09-01T09:50:26+08:00 ] 127.0.0.1 /__PUBLdIC__/uploadify/uploadify.swf?preventswfcaching=1441072226094
+ERR: 无法加载模块:__PUBLdIC__
+
+[ 2015-09-01T09:50:26+08:00 ] 127.0.0.1 /__PUBLdIC__/uploadify/uploadify.swf?preventswfcaching=1441072226094
+ERR: 无法加载模块:__PUBLdIC__
+
+[ 2015-09-01T09:50:26+08:00 ] 127.0.0.1 /__PUBLdIC__/uploadify/uploadify.swf?preventswfcaching=1441072226094
+ERR: 无法加载模块:__PUBLdIC__
+
+[ 2015-09-01T11:57:15+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-01T11:57:15+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-01T11:57:21+08:00 ] 127.0.0.1 /VideoDetail/sendMsg
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: ispassword E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 168 行.
+NOTIC: [8] Undefined index: b618aa3c36e9ee44e3f75312036844af E:\huasuhui\GRProject\drawmadTest\MAD\Common\common.php 第 173 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\huasuhui\GRProject\drawmadTest\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: select * from notice
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '3'
+
+UNION ALL
+
+select * from notice 
+where id not in (
+select notice_id from user_notice
+where user_id = 5000
+) and type = '4' and user_id = 5000
+ [ RunTime:0.001000s ]
+SQL: select a.*, b.message, b.date as notice_date
+from user_notice a
+LEFT JOIN notice b on a.notice_id = b.id
+where a.user_id = 5000 and a.type in (3,4) and a.is_del = 0
+and a.state = 0
+
+ORDER BY b.date desc [ RunTime:0.001000s ]
+SQL: 			select ifnull(max(num_floor) + 1, 1) as num_floor 
+			from video_comments
+			where video_id =  10013 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `video_comments` [ RunTime:0.003000s ]
+SQL: INSERT INTO `video_comments` (`time`,`video_id`,`content`,`parent_id`,`user_id`,`username`,`nick_name`,`user_img`,`num_floor`) VALUES ('2015-09-01 11:57:21',10013,'gg',0,5000,'wuliao','无聊你妹','hed_5000.png',12) [ RunTime:0.035002s ]
+
+[ 2015-09-01T11:58:02+08:00 ] 127.0.0.1 /www
+ERR: 无法加载模块:www
+
+[ 2015-09-01T11:58:02+08:00 ] 127.0.0.1 //MAD/Modules/Index/Tpl/Public/videos/364486142@qq.com_1428249349_439462054.mp4
+ERR: 无法加载模块:MAD
+
+[ 2015-09-01T12:50:40+08:00 ] 127.0.0.1 /%E5%8F%8D%E5%8F%8D%E5%A4%8D%E5%A4%8D
+ERR: 无法加载模块:反反复复
+
+[ 2015-09-01T12:50:45+08:00 ] 127.0.0.1 /%E5%8F%8D%E5%8F%8D%E5%A4%8D%E5%A4%8D
+ERR: 无法加载模块:反反复复
+
+[ 2015-09-01T12:50:49+08:00 ] 127.0.0.1 /%E5%8F%8D%E5%8F%8D%E5%A4%8D%E5%A4%8D
+ERR: 无法加载模块:反反复复
+
+[ 2015-09-01T12:57:53+08:00 ] 127.0.0.1 /%E9%A6%96%E9%A1%B51
+ERR: 无法加载模块:首页1
+
+[ 2015-09-01T12:58:48+08:00 ] 127.0.0.1 /%E9%A6%96%E9%A1%B51
+ERR: 无法加载模块:首页1
+
+[ 2015-09-01T12:59:39+08:00 ] 127.0.0.1 /%E9%A6%96%E9%A1%B51
+ERR: 无法加载模块:首页1
+
+[ 2015-09-01T12:59:42+08:00 ] 127.0.0.1 /%E5%8F%8D%E5%8F%8D%E5%A4%8D%E5%A4%8D
+ERR: 无法加载模块:反反复复
+
+[ 2015-09-01T12:59:47+08:00 ] 127.0.0.1 /%E9%A6%96%E9%A1%B51
+ERR: 无法加载模块:首页1
+
